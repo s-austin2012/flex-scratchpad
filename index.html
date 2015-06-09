@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
+  <section>
+    <h3>HTML5 video by itself</h3>
   <video src="http://html5doctor.com/demos/video-canvas-magic/video.mp4" controls="Controls True if Present False if Omitted" >
     Your browswer does not support the video element.  Download the video at: (TO BE ADDED LATER)
   </video>
+  </section>
+  <section>
+    <h3>HTML5 video multiples, different sources.</h3>
+    <h4>Use source attribute, also need to include type</h4>
+    <h4>The browswer will know which format is best to use, or use the first if multiple options work for it.</h4>
+    <video controls>
+      <source src="http://html5doctor.com/demos/video-canvas-magic/video.webm" type="video/webm">
+      <source src="http://html5doctor.com/demos/video-canvas-magic/video.ogg" type="video/ogg">
+      <source src="http://html5doctor.com/demos/video-canvas-magic/video.mp4" type="video/mp4">
+    </video>
+  </section>
 <audio controls="controls">
   <source src="https://dl.dropboxusercontent.com/u/1631516/horse.ogg" type="audio/ogg" />
   <source src="https://dl.dropboxusercontent.com/u/1631516/horse.mp3" type="audio/mp3" />
