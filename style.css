@@ -13,6 +13,8 @@ footer {
 section {
   background:#800000;
   color:#ffffff;
+  padding-top:10px;
+  padding-bottom:10px;
 }
 footer {
   clear: both;
