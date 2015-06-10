@@ -7,8 +7,7 @@ body
 header {
     background:#000000;
     color:#ffffff;
-    padding-top:15px;
-    padding-bottom:15px;
+    width:100%;
 }
 header,
 aside,
