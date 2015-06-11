@@ -1,4 +1,4 @@
-/*margin, padding, overflow hidden added for viewport units responsive videos*/
+
 main,
 body
 {
@@ -8,6 +8,12 @@ body
 video {
   height: 100vh;
   width: 100vw;
+}
+/*margin, padding, overflow hidden added for viewport units responsive videos*/
+.videoarea {
+    margin:0;
+    padding:0;
+    overflow:hidden;
 }
 header,
 footer {
