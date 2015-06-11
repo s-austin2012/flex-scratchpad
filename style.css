@@ -1,8 +1,16 @@
-
+/*margin, padding, overflow hidden added for viewport units responsive videos*/
 main,
 body
 {
     font-family: "Arial", "Helvetica", sans-serif;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+/*viewport units for responsive */
+video {
+  height: 100vh;
+  width: 100vw;
 }
 header,
 footer {
