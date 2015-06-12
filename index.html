@@ -24,14 +24,13 @@
   </header>
   <nav style="background:#800000;color:#ffffff;text-align:center;"><h3>Navigation Here</h3></nav>
   <section>
-    
-    <h3>HTML5 video by itself</h3>
-  <video src="http://html5doctor.com/demos/video-canvas-magic/video.mp4" controls="Controls True if Present False if Omitted" >
+    <h3>Video Test One: HTML5 video by itself</h3>
+   <video src="http://html5doctor.com/demos/video-canvas-magic/video.mp4" controls="Controls True if Present False if Omitted" >
     Your browswer does not support the video element.  Download the video at: (TO BE ADDED LATER)
   </video>
   </section>
   <section>
-    <h3>HTML5 video multiples, different sources.</h3>
+    <h3>Video Test Two: HTML5 video multiples, different sources.</h3>
     <h4>Use source attribute, also need to include type</h4>
     <h4>The browswer will know which format is best to use, or use the first if multiple options work for it.</h4>
     <video controls>
@@ -41,7 +40,7 @@
     </video>
   </section>
    <section style="background:#000000;color:#ffffff;">
-    <h3>HTML5 video multiples, different sources.</h3>
+    <h3>Video Test Three: HTML5 video multiples, different sources.</h3>
     <h4>Size meta-data added, height 100 width 100 </h4>
     <h4>Preload none attribute added, recommended for mobile devices.</h4>
     <h4>You should only see a part of the control visible, with space "reserved" for the video</h4>
@@ -78,6 +77,22 @@
 </audio>
   </figcaption>
 </figure>
+</section>
+<section>
+  <h3>Video Test Four: Track Element, Closed Captions</h3>
+  
+    <video height="272" width="640"
+           poster="http://content.bitsontherun.com/thumbs/q1fx20VZ-640.jpg"
+           crossorigin="anonymous"
+           controls>
+       <source src="http://demo.jwplayer.com/html5-report/sintel.mp4"
+               type="video/mp4">
+       <source src="http://demo.jwplayer.com/html5-report/sintel.webm"
+               type="video/webm">
+       <track src="http://demo.jwplayer.com/html5-report/sintel-captions.vtt"
+              kind="captions" label="Closed Captions" default>
+    </video>
+
 </section>
 </main>
 <footer>
