@@ -7,8 +7,8 @@ body
 /*viewport units for responsive */
 /*Note that 100vh acts like 100 percent 50 vh acts like 50 percent of height*/
 video {
-  height: 50vh;
-  width: 50vw;
+  height: 25vh;
+  width: 25vw;
 }
 /*margin, padding, overflow hidden added for viewport units responsive videos.  When the below settings for margin, padding, and overflow were used on the body and main, the scrollbar was lost on the site*/
 .videoarea {
