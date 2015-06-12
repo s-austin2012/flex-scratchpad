@@ -31,6 +31,8 @@ section {
   color:#ffffff;
   padding-top:10px;
   padding-bottom:10px;
+  float: left;
+  width: 30%;
 }
 footer {
   clear: both;
