@@ -1,117 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>HTML5 Sandbox Site</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet alternate large" href="big.css">
-    <link rel="stylesheet alternate small" href="small.css">
-    <script src="support.js"></script>
-  </head>
-  <body itemscope itemtype="http://schema.org/CreativeWork">
-  <main>
-  <header>
-    <h1 style="text-align:center;">HTML5 Scratch Site</h1>
-    <picture>
-      <source srcset="https://cloud.githubusercontent.com/assets/10208580/8088844/3ec42e48-0f72-11e5-867f-dc46c6c4aa40.jpg" media="(min-width:768px) and (orientation: landscape)">
-      <img srcset="https://cloud.githubusercontent.com/assets/10208580/8088844/3ec42e48-0f72-11e5-867f-dc46c6c4aa40.jpg" alt="Old hunting image with dogs and deer" media="(min-width:768px) and (orientation: landscape)">
-    </picture>
-    <aside>
-    <h5>Hunting scene from BL Royal 2 B VII, f. 152 England (London/Westminster or East Anglia?)between 1310 and 1320; 1310 - 1320 <br />
-    url=http://www.europeana.eu/resolve/record/9200397/BibliographicResource_3000126285449|title=Hunting scene from BL Royal 2 B VII, f. 152|accessdate=2015-06-10 |publisher=Europeana</h5>
-    </aside>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Coding Exercise</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- USFSP -->
+    <link rel='stylesheet' id='avia-google-webfont' href='//fonts.googleapis.com/css?family=PT+Sans%7COpen+Sans:400,600%7CEB+Garamond' type='text/css' media='all'/>
     
-  </header>
-  <nav style="background:#800000;color:#ffffff;text-align:center;">
-  <h3>Navigation Here</h3>
-  
-  </nav>
-  <section>
-    <h3>Video Test One: HTML5 video by itself</h3>
-   <video src="http://html5doctor.com/demos/video-canvas-magic/video.mp4" controls="Controls True if Present False if Omitted" >
-    Your browswer does not support the video element.  Download the video at: (TO BE ADDED LATER)
-  </video>
-  </section>
-  <section>
-    <h3>Video Test Two: HTML5 video multiples, different sources.</h3>
-    <h4>Use source attribute, also need to include type</h4>
-    <h4>The browswer will know which format is best to use, or use the first if multiple options work for it.</h4>
-    <video controls>
-      <source src="http://html5doctor.com/demos/video-canvas-magic/video.webm" type="video/webm">
-      <source src="http://html5doctor.com/demos/video-canvas-magic/video.ogg" type="video/ogg">
-      <source src="http://html5doctor.com/demos/video-canvas-magic/video.mp4" type="video/mp4">
-    </video>
-  </section>
-   <section style="background:#000000;color:#ffffff;">
-    <h3>Video Test Three: HTML5 video multiples, different sources.</h3>
-    <h4>Size meta-data added, height 100 width 100 </h4>
-    <h4>Preload none attribute added, recommended for mobile devices.</h4>
-    <h4>You should only see a part of the control visible, with space "reserved" for the video</h4>
-    <video controls width=100 height=100 preload="none">
-      <source src="http://html5doctor.com/demos/video-canvas-magic/video.webm" type="video/webm">
-      <source src="http://html5doctor.com/demos/video-canvas-magic/video.ogg" type="video/ogg">
-      <source src="http://html5doctor.com/demos/video-canvas-magic/video.mp4" type="video/mp4">
-    </video>
-  </section>
-  <section>
-<audio controls="controls">
-  <source src="https://dl.dropboxusercontent.com/u/1631516/horse.ogg" type="audio/ogg" />
-  <source src="https://dl.dropboxusercontent.com/u/1631516/horse.mp3" type="audio/mp3" />
-  Your browser does not support the audio element.
-      Download the audio/video in
-     <a href=”https://dl.dropboxusercontent.com/u/1631516/horse.ogg”>OGG</a>
-     or <a href=”https://dl.dropboxusercontent.com/u/1631516/horse.ogg”>MP3</a> 
-     format.
-</audio>
-</section>
-<section>
-  <h3>Audio, Video with CSS Animations</h3>
-<figure id="figaudio1">
-  <img id="imghorse" width="300" 
-       src="http://upload.wikimedia.org/wikipedia/commons/d/d4/Nokota_Horses.jpg" 
-       alt = "a horse"/> 
-  <figcaption id="figcptionaudio1"> Press Play to hear the horse ! 
-<audio controls="controls">
-  <source src="https://dl.dropboxusercontent.com/u/1631516/horse.ogg" type="audio/ogg" />
-  <source src="https://dl.dropboxusercontent.com/u/1631516/horse.mp3" type="audio/mp3" />
-  Your browser does not support the audio element.
-      Download the audio/video in
-     <a href=”https://dl.dropboxusercontent.com/u/1631516/horse.ogg”>OGG</a>
-     or <a href=”https://dl.dropboxusercontent.com/u/1631516/horse.ogg”>MP3</a> 
-     format.
-</audio>
+    <!-- end USFSP -->
+  </head>
+  <body>
+    
+    <header id="branding">
+      <h1>Coding Exercise</h1>
+      </header>
+      <nav>
+        <header><h3>Nav Menu</h3></header>
+        <ul>
+          <li>Source Documents</li>
+          <li>Validation</li>
+          <li>Illustrations</li>
+        </ul>
+      </nav>
+
+    <article>
+    
+      <header>
+        <h2>Source Documents</h2>
+      </header>
+      <section>
+        <h3>Bootstrap</h3>
+        <h4><a href="http://getbootstrap.com/">Bootstrap Home Page</a></h4>
+        <h4><a href="https://github.com/twbs/bootstrap">Bootstrap on Github</a></h4>
+        <h4><a href="http://getbootstrap.com/getting-started/">Basic Bootstrap Template</a></h4>
+      </section>
+      <section>
+      <header>
+          <h2>Validation References</h2>
+      </header>
+          <h3><a href="https://validator.w3.org/">W3C Validator</a></h3>
+      </section>
+    </article>
+    <article>
+      <header>
+        <h2>Illustrations</h2>
+      </header>
+      <section>
+        <figure>
+  <img src="http://www.fredcavazza.net/files/2009/09/html5_structure.png" alt="Example of HTML5 structuring tags" />
+  <figcaption>
+    <h5>Fig. 1 : an example of how new structuring elements could be used. This page put a &lt;nav&gt; on top, and does not have headers and footer for each article, like in this figure, but it could... By the way, this is a &lt;figcaption&gt; inside a &lt;figure&gt; element...</h5>
   </figcaption>
 </figure>
-</section>
-<section>
-  <h3>Video Test Four: Track Element, Closed Captions</h3>
-  
-    <video height="272" width="640"
-           poster="http://content.bitsontherun.com/thumbs/q1fx20VZ-640.jpg"
-           crossorigin="anonymous"
-           controls>
-       <source src="http://demo.jwplayer.com/html5-report/sintel.mp4"
-               type="video/mp4">
-       <source src="http://demo.jwplayer.com/html5-report/sintel.webm"
-               type="video/webm">
-       <track src="http://demo.jwplayer.com/html5-report/sintel-captions.vtt"
-              kind="captions" label="Closed Captions" default>
-    </video>
-
-</section>
-</main>
-<aside style="text-align:center;">
-  <h4>Reference Links</h4>
-  <h5><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#embedded-content">Reference Article</a></h5>
-  <h5><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-track-element">W3C Track Element</a></h5>
-  <h5><a href="http://web.archive.org/web/20120302050328/http://dev.opera.com/articles/view/introduction-html5-video">Opera Browswer</a></h5>
-  <h5><a href="http://www.longtailvideo.com/html5/">State of HTML5 Video</a></h5>
-  <h5><a href="http://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/ControllingMediaWithJavaScript/ControllingMediaWithJavaScript.html">Apple Reference</a></h5>
-</aside>
-<footer style="background:#800000;color:#ffffff;text-align:center;">
-<h5>Footer </h5> 
-</footer>
-</body>
+      
+      </section>
+        </article>
+    <aside style="width:100%"><!--Temporary override of Bootstrap style for aside-->
+      <h4>References</h4>
+      <ul>
+        <li><a href="https://validator.w3.org/">Nu Validator</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">Notes on Assistive Technology and Validation</a></li>
+        <li><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-article-element">Each article should be identified, typically by including a heading (h1–h6 element) as a child of the article element.</a></li>
+      </ul>  
+        </aside>
+<footer>&nbsp;</footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
- 
-   
