@@ -66,7 +66,17 @@
           <h3><a href="https://validator.w3.org/">W3C Validator</a></h3>
       </section>
       </div><!-- closes md4 -->
-      <div class="col-md-4">Facebook here</div>
+      <div class="col-md-4"><h2>Facebook here</h2>
+      <?php
+include_once('https://github.com/samacs/simple_html_dom.php');
+// Create DOM from URL or file
+$html = file_get_html('http://dspace.nelson.usf.edu/xmlui/handle/10806/10/statistics');
+
+echo $html->getElementById("aspect_statistics_StatisticsTransformer_div_tablewrapper")->childNodes(1)->childNodes(1)->childNodes(7)->getAttribute('id'); 
+
+?>
+      
+      </div>
     </article>
     </div><!-- closes container fluid -->
     <article>
