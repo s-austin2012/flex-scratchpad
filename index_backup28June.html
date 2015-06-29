@@ -23,12 +23,12 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- USFSP -->
-    <link rel='stylesheet' id='avia-google-webfont' href='//fonts.googleapis.com/css?family=PT+Sans%7COpen+Sans:400,600%7CEB+Garamond' type='text/css' media='all'/>
-    <link href="http://cook-my-catch.github.io/usfsp.css" rel="stylesheet">
+    <!-- <link rel='stylesheet' id='avia-google-webfont' href='//fonts.googleapis.com/css?family=PT+Sans%7COpen+Sans:400,600%7CEB+Garamond' type='text/css' media='all'/> -->
+    <link href="usfsp.css" rel="stylesheet">
     <!-- end USFSP -->
   </head>
-  <body>
-    <div class="container-fluid header">
+  <body class="wrap_all">
+    <div class="container-fluid header hfgreen">
       <div class="col-md-12">
     <header>
       <h1>Coding Exercise</h1>
@@ -41,61 +41,148 @@
           <li>Illustrations</li>
         </ul>
       </nav>
+      <!--enter here for Bootstrap nav class -->
+       <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Coding Exercise</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+      <!-- stop here for Bootstrap nav class -->
       </div><!-- closes md12 -->
   </div><!-- closes container fluid -->
-  <div class="container-fluid">
+  <main>
+    <!-- Note The main element is useful for accessibility, as a screen reader reading the main part of the document, will say: "entering the main section..."-->
+  <div class="container-fluid main_color" style="background:#e3e7ea">
     <article>
     <div class="col-md-12">
       <header>
-        <h2>Source Documents</h2>
+        <h2>Conformance, Validation, and...</h2>
       </header>
       </div><!-- closes md12 for header -->
       <div class="col-md-4">
       <section>
-        <h3>Bootstrap</h3>
-        <h4><a href="http://getbootstrap.com/">Bootstrap Home Page</a></h4>
-        <h4><a href="https://github.com/twbs/bootstrap">Bootstrap on Github</a></h4>
-        <h4><a href="http://getbootstrap.com/getting-started/">Basic Bootstrap Template</a></h4>
+        <h2>Outlines</h2>
+        <h3>4.3.10.1 Creating an outline</h3>
+        <h4>There are currently no known implementations of the outline algorithm in graphical browsers or assistive technology user agents, although the algorithm is implemented in other software such as conformance checkers. Therefore the outline algorithm cannot be relied upon to convey document structure to users. Authors are advised to use heading rank (h1-h6) to convey document structure.</h4>
+        <h4>Source: <a href="http://www.w3.org/TR/html5/sections.html#outlines">4.3. HTML5 Outlines</a></h4>
+        <h3>Important to note: The HTML5 header element does not take part in the outline algorithm.</h3>
+        <h4>Source: <a href="http://www.w3.org/TR/2014/CR-html5-20140731/sections.html#the-header-element">W3C section on header element</a></h4>
       </section>
       </div><!-- closes colmd4 -->
       <div class="col-md-4">
       <section>
-      <header>
-          <h2>Validation References</h2>
-      </header>
-          <h3><a href="https://validator.w3.org/">W3C Validator</a></h3>
+          <h2>Conformance:</h2>
+          
+          <ul>
+            <li>Conformance and Validation are not the same thing.</li>
+            <li>There are differences between the w3c validator and the nu markup checker.</li>
+            <li>There are differences between W3C HTML and WHATWG HTML conformance.</li>
+            <li>DTD and Schema are not equivalent.</li>
+          </ul>
+          <h4>Source: <a href="http://html5doctor.com/html5-check-it-before-you-wreck-it-with-miketm-smith/">Check It Before You Wreck It</a></h4>
       </section>
       </div><!-- closes md4 -->
-      <div class="col-md-4">Facebook here</div>
+      <div class="col-md-4">
+        <aside>
+          <h2>Aside</h2>
+          <h3>Why we care about outlines</h3>
+          <p>Document outlines rely on heading structure, and this was and is used to generate outlines for assitive technology.  <a href="http://webaim.org/projects/screenreadersurvey/#headings">See the results of webaim survey here.</a><p>
+          <h4>Does the HTML5 header element help?</h4>
+          <h4>The header element is not sectioning content; it doesn't introduce a new section.</h4>
+          <a href="http://www.w3.org/TR/2014/CR-html5-20140731/sections.html#the-header-element">Link to the W3C reference</a>
+          
+        </aside>
+      </div><!-- closes md4 -->
     </article>
     </div><!-- closes container fluid -->
+    <!-- start of second group -->
+<div class="container-fluid main_color" style="background:#ff0000">
     <article>
+    <div class="col-md-12">
       <header>
-        <h2>Illustrations</h2>
+        <h2>Browser Tools</h2>
       </header>
+      </div><!-- closes md12 for header -->
+      <div class="col-md-4">
       <section>
-        <figure>
-  <img src="http://www.fredcavazza.net/files/2009/09/html5_structure.png" alt="Example of HTML5 structuring tags" />
-  <figcaption>
-    <h5>Fig. 1 : an example of how new structuring elements could be used. This page put a &lt;nav&gt; on top, and does not have headers and footer for each article, like in this figure, but it could... By the way, this is a &lt;figcaption&gt; inside a &lt;figure&gt; element...</h5>
-  </figcaption>
-</figure>
-      
+        <h2>Image One</h2>
+        <img src="http://cook-my-catch.com/T3special/BrowserToolStyle.jpg" class="img-responsive" alt="Screenshot showing default interface.">
+        <h4>content</h4>
+        
       </section>
-        </article>
-    <aside style="width:100%"><!--Temporary override of Bootstrap style for aside-->
-      <h4>References</h4>
+      </div><!-- closes colmd4 -->
+      <div class="col-md-4">
+      <section>
+          <h2>Image Two</h2>
+        <img src="http://cook-my-catch.com/T3special/Styles-1.jpg" class="img-responsive" alt="Screenshot showing default interface.">
+        <h4>content</h4>
+      </section>
+      </div><!-- closes md4 -->
+      <div class="col-md-4">
+        <section>
+          <h2>Image Three</h2>
+        <img src="http://cook-my-catch.com/T3special/Styles-2.jpg" class="img-responsive" alt="Screenshot showing default interface.">
+        <h4>content</h4>
+      </section>
+      </div><!-- closes md4 -->
+    </article>
+    </div><!-- closes container fluid -->    
+    
+    
+    
+    <!-- end of second group -->
+    </main><!-- all else are references -->
+    <div class="container-fluid footer_color">
+    <footer><!-- USFSP footer color -->
+      <div class="col-md-4">
       <ul>
+        <li><a href="http://gsnedders.html5.org/outliner/">HTML5 Outliner Tool</a></li>
         <li><a href="https://validator.w3.org/">Nu Validator</a></li>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">Notes on Assistive Technology and Validation</a></li>
         <li><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-article-element">Each article should be identified, typically by including a heading (h1–h6 element) as a child of the article element.</a></li>
       </ul>  
-        </aside>
+      </div>
+      <div class="col-md-4">
+          <ul>
+            <li><a href="http://getbootstrap.com/">Bootstrap Home Page</a></li>
+            <li><a href="https://github.com/twbs/bootstrap">Bootstrap on Github</a></li>
+            <li><a href="http://getbootstrap.com/getting-started/">Basic Bootstrap Template</a></li> 
+          </ul>
+      </div>
+      <div class="col-md-4">
+      </div><!-- closes colmd4 -->
+      </footer>
+    </div><!-- closes container fluid for first clean white footer -->
 <footer>&nbsp;</footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- check for below -->
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
- 
+         
+     
