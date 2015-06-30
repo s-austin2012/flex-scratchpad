@@ -1,39 +1,4 @@
 @charset "utf-8";
-/*Source http;//www.usfsp.edu/home/wp-content/themes/COAS/css/custom.css?ver=2 */
-/* Have fun adding your style here :) - PS: At all times this file should contain a comment or a rule, otherwise opera might act buggy :( */
-
-/* General Custom CSS */
-
-@charset "utf-8";
-/* Source: http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,700 */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTegdm0LZdjqr5-oayXSOefg.woff2) format('woff2'), url(http://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(http://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2) format('woff2'), url(http://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 800;
-  src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(http://fonts.gstatic.com/s/opensans/v13/EInbV5DfGHOiMmvb1Xr-hugdm0LZdjqr5-oayXSOefg.woff2) format('woff2'), url(http://fonts.gstatic.com/s/opensans/v13/EInbV5DfGHOiMmvb1Xr-hnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
-}
-/* Have fun adding your style here :) - PS: At all times this file should contain a comment or a rule, otherwise opera might act buggy :( */
-
-/* General Custom CSS */
-
 /*USFSP/CHANGE*/
 
 .hfgreen {
@@ -64,4 +29,16 @@ color:#ffffff;
     border-color: #E1E1E1;
     font-size: 14px;
 }
+.footer_color, .footer_color .site-background, .footer_color .first-quote, .footer_color .related_image_wrap, .footer_color .gravatar img .footer_color .hr_content, .footer_color .news-thumb, .footer_color .post-format-icon, .footer_color .ajax_controlls a, .footer_color .tweet-text.avatar_no, .footer_color .toggler, .footer_color .toggler.activeTitle:hover, .footer_color #js_sort_items, .footer_color.inner-entry, .footer_color .grid-entry-title, .footer_color .related-format-icon, .grid-entry .footer_color .avia-arrow, .footer_color .avia-gallery-big, .footer_color .avia-gallery-big, .footer_color .avia-gallery img, .footer_color .grid-content, .footer_color .av-share-box ul, #top .footer_color .av-related-style-full .related-format-icon, .footer_color .related_posts.av-related-style-full a:hover, .footer_color.avia-fullwidth-portfolio .pagination .current, .footer_color.avia-fullwidth-portfolio .pagination a, .footer_color .av-hotspot-fallback-tooltip-inner, .footer_color .av-hotspot-fallback-tooltip-count {
+    background-color: #137255;
+    color: #ffffff;
+} 
+.footer_color a, .footer_color .widget_first, .footer_color strong, .footer_color b, .footer_color b a, .footer_color strong a, .footer_color #js_sort_items a:hover, .footer_color #js_sort_items a.active_sort, .footer_color .av-sort-by-term a.active_sort, .footer_color .special_amp, .footer_color .taglist a.activeFilter, .footer_color #commentform .required, #top .footer_color .av-no-color.av-icon-style-border a.av-icon-char {
+    color: #ffffff;
+}
  
+h1, h2, h3, h4, h5, h6, #top .title_container .main-title, tr.pricing-row td, #top .portfolio-title, .callout .content-area, .avia-big-box .avia-innerbox, .av-special-font, .av-current-sort-title{font-family:'PT Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+body {
+  font-family:'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  
+}
