@@ -31,6 +31,7 @@ footer {
 section {
  margin-left:25px;
 }
-footer -> heading {
+footer.heading {
   margin-left:250px;
 }
+  
