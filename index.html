@@ -6,7 +6,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body ononline="update(true)"
+       onoffline="update(false)"
+       onload="update(navigator.onLine)">
+      <!-- source of above: http://www.w3.org/TR/html5/sections.html -->
+      <p>You are: <span id="status">(Unknown)</span></p>
     <header>
     <h1>
       <a href="http://red-hound.github.io/">HTML5 Project</a>
