@@ -3,3 +3,11 @@
 .header1 {
 background:url('https://cloud.githubusercontent.com/assets/10208580/8580190/25e62e8c-2587-11e5-8262-cf8933518761.jpg');no-repeat center center;height:500px;background-size:cover;
 }
+footer a, ul, li {
+  background:red;
+  color:#ffffff;
+}
+footer a:hover, a:focus {
+  background:black;
+  color:#ffffff;
+}
