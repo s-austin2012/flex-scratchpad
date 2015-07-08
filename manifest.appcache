@@ -8,6 +8,7 @@ index.html
 style.css
 images/logo.png
 scripts/main.js
+scripts/monitor.js
 
 # Resources that require the user to be online.
 NETWORK:
