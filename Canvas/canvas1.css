@@ -28,4 +28,11 @@ footer {
   -webkit-tap-highlight-color:rgba(0,0,0,0)
 }
   
-  
+section {
+  padding-left:1em;
+  padding-right:1em;
+}
+heading {
+  padding-left:1em;
+  padding-right:1em;
+}
