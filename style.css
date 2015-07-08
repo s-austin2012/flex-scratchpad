@@ -1,0 +1,10 @@
+        #status {
+          color: #FFFFFF;
+          padding: 5px;
+        }
+        .online {    
+          background: green;
+        }
+        .offline {
+          background:  red;  
+        }
