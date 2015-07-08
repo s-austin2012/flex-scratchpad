@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+  <html manifest="manifest.appcache" data-revision="1.0" lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Project Page | HTML 5</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <body ononline="update(true)"
+       onoffline="update(false)"
+       onload="update(navigator.onLine)">
+      <!-- source of above: http://www.w3.org/TR/html5/sections.html -->
+      <p>You are: <span id="status">(Unknown)</span></p>
+    <header>
+    <h1>
+      <a href="http://red-hound.github.io/">HTML5 Project</a>
+    </h1>
+    <nav id="skip">
+      <a href="#main">Skip to Main Content</a>
+      </nav> 
+    
+    <nav id="sitenav">
+      <ul>
+        <li><a href="#main">Main</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+      <header><h2>Project Page HTML5</h2></header>
+      <aside><h3>This Page is Under Construction</h3></aside>
+  <article><h4>Article</h4>
+    <section><h5>Section</h5></section>
+  </article>
+  <footer id="references">
+    <h4>References</h4>
+    <ul>
+      <li><a href="http://diveintohtml5.info/offline.html">Cache Manifest</a></li>
+      <li><a href="http://westciv.com/tools/manifestR/">Make a Manifest Tool</a></li>
+      <li><a href="http://appcache.offline.technology/">Appcache Online</a></li>
+    </ul>
+  </footer>
+</main>
+<script src="scripts/monitor.js"></script>
+<script src="scripts/status.js"></script>
+</body>
+</html>
+  
