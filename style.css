@@ -8,10 +8,17 @@
         .offline {
           background:  red;  
         }
-        header, footer {
+        main, body {
+                font-family:Arial;
+        }
+        header {
                 color: #ffffff;
                 background:#00ccff;
                 width:100%;
         }
-        
+        footer {
+                color: #ffffff;
+                background:#0099cc;
+                width:100%;
+        }
  
