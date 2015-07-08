@@ -8,3 +8,9 @@
         .offline {
           background:  red;  
         }
+        header, footer {
+                color: #ffffff;
+                background:#00ccff;
+                width:100%;
+        }
+        
