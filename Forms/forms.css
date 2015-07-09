@@ -5,9 +5,7 @@ input:valid {
   background-color: lightGreen;
 }
 section {
-  margin:15px;
-  padding-top:5px;
-  padding-bottom:5px;
+  margin:25px;
   border-bottom: 3px solid lightblue;
 }
 body, main {
