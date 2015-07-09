@@ -1,0 +1,18 @@
+input:invalid { 
+  background-color: lightPink;
+}
+input:valid { 
+  background-color: lightGreen;
+}
+section {
+  margin:25px;
+  border-bottom: 3px solid lightblue;
+  padding-bottom:10px;
+}
+body, main {
+  font-family:Arial;
+}
+h2 {
+  color:#336699;
+  margin-left:15px;
+} 
