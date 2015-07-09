@@ -4,12 +4,9 @@ input:invalid {
 input:valid { 
   background-color: lightGreen;
 }
-article {
-  border-bottom: 3px solid #336699;
-}
 section {
-  padding-top:15px;
-  padding-bottom:15px;
+  padding-top:5px;
+  padding-bottom:5px;
   border-bottom: 3px solid lightblue;
 }
 body, main {
