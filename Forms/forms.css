@@ -5,11 +5,12 @@ input:valid {
   background-color: lightGreen;
 }
 article {
-  border-bottom: 5px solid #336699;
+  border-bottom: 3px solid #336699;
 }
 section {
   padding-top:15px;
-  padding-bottom:15px; 
+  padding-bottom:15px;
+  border-bottom: 3px solid lightblue;
 }
 body, main {
   font-family:Arial;
