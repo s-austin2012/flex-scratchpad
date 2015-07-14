@@ -1,0 +1,44 @@
+main, body {
+  font-family:Arial;
+}
+header {
+  color: #ffffff;
+  background:#00ccff;
+  width:100%;
+}
+footer {
+  color: #ffffff;
+  background:#0099cc;
+  width:100%;
+}
+        
+ /* below section on skip is from http://webaim.org/techniques/css/invisiblecontent/ */        
+#skip a {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+#skip a:focus {
+position:static;
+width:auto;
+height:auto;
+} 
+ /* end skip to content styling */
+ /* beginning of online or offline status indicators */
+ #status {
+      color: #FFFFFF;
+      padding: 5px;
+   
+ }
+ .online {    
+          background: green;
+        }
+.offline {
+          background:  red;  
+        }
+
+/*end online offline status indicator styling */ 
