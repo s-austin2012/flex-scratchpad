@@ -4,12 +4,10 @@ main, body {
 header {
   color: #ffffff;
   background:#00ccff;
-  width:100%;
 }
 footer {
   color: #ffffff;
   background:#0099cc;
-  width:100%;
 }
         
  /* below section on skip is from http://webaim.org/techniques/css/invisiblecontent/ */        
