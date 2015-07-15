@@ -41,6 +41,37 @@
       </section>
     <section>
       <header><h3>Section Three: Autopopulate a form?</h3></header>
+          <title>Modified EDX Example Validation API</title>
+          <h4>Here, we remove validation requirements so that those with disabilities can send the form in a hurry.</h4>
+    <style>
+ .myForm input:invalid { background-color: lightPink;}
+  .myForm input:valid { background-color:lightGreen; }
+ .myForm input:required {border: 2px solid red;}
+ .myForm input:optional {border: 2px solid green;}
+  .myForm label { display: inline-block; width: 140px; text-align: right; } 
+</style>
+<form class="myForm">
+  <fieldset>
+    <legend>Modified EDX Example use of the validation API</legend>
+ <label for="password1" >Password:</label> <input type="password" id="password1" oninput="checkPasswords()" required>
+ <p>
+ <label for="password2">Repeat password:</label> <input type="password" id="password2" oninput="checkPasswords()" required>
+ <p>
+   <button>Submit</button>
+  </fieldset>
+</form>
+
+<script> 
+ function checkPasswords() {
+ var password1 = document.getElementById('password1');
+ var password2 = document.getElementById('password2');
+ if (password1.value != password2.value) {
+ password2.setCustomValidity('Passwords non identiques');
+ } else {
+ password2.setCustomValidity('');
+ }
+ }
+</script>
  
       </section>
   </article>
