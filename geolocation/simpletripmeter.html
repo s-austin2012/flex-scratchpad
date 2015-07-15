@@ -7,9 +7,9 @@
     </head>
     <body>
       <main>
-        <h2>A Simple Trip Meter</h2>
+        <h1>A Simple Trip Meter</h1>
       <article>
-        <h3>Code sample based on an article by  Michael Mahemoff</h3>
+        <h2>Code sample based on an article by  Michael Mahemoff</h2>
         <section>
           <header><h3>Step One: Check for Compatibility</h3></header>
           <script>
@@ -23,7 +23,7 @@ else {
           </script>
         </section>
         <section>
-          <h4>Step Two: Declare the Trip Meter HTML</h4>
+          <header><h3>Step Two: Declare the Trip Meter HTML</h3></header>
           <div id="tripmeter">
   <p>
     Starting Location (lat, lon):<br/>
@@ -54,8 +54,8 @@ else {
           </script>
         </section>
         <section>
-          <h3>Step Four: Handle Errors</h3>
-          <header><h4>Excerpt: A second, optional, argument to getCurrentPosition() will be called in the event of an error, so you can notify the user inside the callback</h4></header>
+          <header><h3>Step Four: Handle Errors</h3></header>
+          <h4>Excerpt: A second, optional, argument to getCurrentPosition() will be called in the event of an error, so you can notify the user inside the callback</h4>
           <script>
             window.onload = function() {
   var startPos;
@@ -81,7 +81,7 @@ else {
   document.getElementById('currentLon').innerHTML = position.coords.longitude;
 });
           </script>
-          <h4>The calculateDistance() function performs a geometric algorithm to determine the distance between two co-ordinates. The Javascript implementation is adapted from a script provided by Moveable Type under a Creative Commons license:</h4>
+         
         </section>
         <section>
           <header><h3>Step Six: Show Distance Traveled</h3></header>
@@ -94,6 +94,7 @@ else {
                         position.coords.latitude, position.coords.longitude);
 });
         </script>
+         <h4>The calculateDistance() function performs a geometric algorithm to determine the distance between two co-ordinates. The Javascript implementation is adapted from a script provided by Moveable Type under a Creative Commons license:</h4>
         </section>
       </article>
     </main>
@@ -105,4 +106,4 @@ else {
   </body>
 </html>
       
-             
+               
