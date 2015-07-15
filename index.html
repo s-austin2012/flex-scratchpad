@@ -43,14 +43,15 @@
       <header><h3>Section Three: Autopopulate a form?</h3></header>
           <h4>Modified EDX Example Validation API</h4>
           <h4>Here, we remove validation requirements so that those with disabilities can send the form in a hurry.</h4>
-          <h4>no validate was added to the form class, and this in turn removed the colored background</h4>
+          <h4>If no validate was added to the form class, the colored background is removed</h4>
+          <h4>"Required" was removed</h4>
 
 <form class="myForm">
   <fieldset>
     <legend>Modified EDX Example use of the validation API</legend>
  <label for="latitude" >latitude:</label> <input type="text" id="latitude" oninput="populateLatitude()">
  <p>
- <label for="longitude">longitude:</label> <input type="text" id="longitude" oninput="populateLongitude()" required>
+ <label for="longitude">longitude:</label> <input type="text" id="longitude" oninput="populateLongitude()">
  <p>
    <button>Submit</button>
   </fieldset>
