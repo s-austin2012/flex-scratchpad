@@ -10,7 +10,7 @@ footer {
   background:#0099cc;
 }
         
- /* below section on skip is from http://webaim.org/techniques/css/invisiblecontent/ */        
+ /* below section on skip for screen readers and visually impaired is from http://webaim.org/techniques/css/invisiblecontent/ */        
 #skip a {
 position:absolute;
 left:-10000px;
@@ -25,7 +25,7 @@ position:static;
 width:auto;
 height:auto;
 } 
- /* end skip to content styling */
+ /* end WEBAIM skip to content styling */
  /* beginning of online or offline status indicators */
  #status {
       color: #FFFFFF;
