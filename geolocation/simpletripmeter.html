@@ -5,5 +5,22 @@
       <title>HTML5 | GeolocationAPI</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body></body>
+    <body>
+      <article>
+        <section>
+          <h3>Check for Compatibility</h3>
+          <script>
+            // check for Geolocation support
+if (navigator.geolocation) {
+  console.log('Geolocation is supported!');
+}
+else {
+  console.log('Geolocation is not supported for this Browser/OS version yet.');
+}
+          </script>
+        </section>
+      </article>
+      
+    </body>
+    <footer>Source: <a href="http://www.html5rocks.com/en/tutorials/geolocation/trip_meter/">A Simple Trip Meter</a></footer>
     </html>
