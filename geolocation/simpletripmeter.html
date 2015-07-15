@@ -11,7 +11,7 @@
       <article>
         <h3>Code sample based on an article by  Michael Mahemoff</h3>
         <section>
-          <h4>Step One: Check for Compatibility</h4>
+          <header><h3>Step One: Check for Compatibility</h3></header>
           <script>
             // check for Geolocation support
 if (navigator.geolocation) {
@@ -40,8 +40,8 @@ else {
 </div>
         </section>
         <section>
-          <h3>Step Three: Determine the User's Current Location</h3>
-          <header><h4>Excerpt: getCurrentPosition() will asynchronously report on the user's current location. Call it as soon as the page loads, so that it will correctly populate - and save for later - the starting position:</h4></header>
+          <header><h3>Step Three: Determine the User's Current Location</h3></header>
+          <h4>Excerpt: getCurrentPosition() will asynchronously report on the user's current location. Call it as soon as the page loads, so that it will correctly populate - and save for later - the starting position:</h4>
           <script>
             window.onload = function() {
   var startPos;
@@ -73,8 +73,8 @@ else {
           </script>
         </section>
         <section>
-          <h3>Step Five: Monitor the Users Location</h3>
-          <header><h4>Excerpt: To track changes, use watchPosition()</h4></header>
+          <header><h3>Step Five: Monitor the Users Location</h3></header>
+          <h4>Excerpt: To track changes, use watchPosition()</h4>
           <script>
             navigator.geolocation.watchPosition(function(position) {
   document.getElementById('currentLat').innerHTML = position.coords.latitude;
@@ -105,4 +105,4 @@ else {
   </body>
 </html>
       
-           
+             
