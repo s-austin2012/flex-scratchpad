@@ -82,6 +82,18 @@ else {
 });
           </script>
         </section>
+        <section>
+          <h3>Step Six: Show Distance Traveled</h3>
+          <header><h4>Excerpt: This step isn't directly related to the Geolocation API</h4></header>
+          <script>
+          navigator.geolocation.watchPosition(function(position) {
+  // same as above
+  document.getElementById('distance').innerHTML =
+      calculateDistance(startPos.coords.latitude, startPos.coords.longitude,
+                        position.coords.latitude, position.coords.longitude);
+});
+        </script>
+        </section>
       </article>
     </main>
     <aside itemscope itemtype="http://schema.org/CreativeWork">
