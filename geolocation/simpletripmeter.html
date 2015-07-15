@@ -53,6 +53,24 @@ else {
 };
           </script>
         </section>
+        <section>
+          <h3>Step Four: Handle Errors</h3>
+          <script>
+            window.onload = function() {
+  var startPos;
+  navigator.geolocation.getCurrentPosition(function(position) {
+    // same as above
+  }, function(error) {
+    alert('Error occurred. Error code: ' + error.code);
+    // error.code can be:
+    //   0: unknown error
+    //   1: permission denied
+    //   2: position unavailable (error response from locaton provider)
+    //   3: timed out
+  });
+};
+          </script>
+        </section>
       </article>
     </main>
     <aside itemscope itemtype="http://schema.org/CreativeWork">
