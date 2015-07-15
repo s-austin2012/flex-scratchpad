@@ -41,7 +41,7 @@ else {
         </section>
         <section>
           <h3>Step Three: Determine the User's Current Location</h3>
-          <header><h4>getCurrentPosition() will asynchronously report on the user's current location. Call it as soon as the page loads, so that it will correctly populate - and save for later - the starting position:</h4></header>
+          <header><h4>Excerpt: getCurrentPosition() will asynchronously report on the user's current location. Call it as soon as the page loads, so that it will correctly populate - and save for later - the starting position:</h4></header>
           <script>
             window.onload = function() {
   var startPos;
@@ -55,7 +55,7 @@ else {
         </section>
         <section>
           <h3>Step Four: Handle Errors</h3>
-          <header><h4>A second, optional, argument to getCurrentPosition() will be called in the event of an error, so you can notify the user inside the callback</h4></header>
+          <header><h4>Excerpt: A second, optional, argument to getCurrentPosition() will be called in the event of an error, so you can notify the user inside the callback</h4></header>
           <script>
             window.onload = function() {
   var startPos;
@@ -74,6 +74,7 @@ else {
         </section>
         <section>
           <h3>Step Five: Monitor the Users Location</h3>
+          <header><h4>Excerpt: To track changes, use watchPosition()</h4></header>
           <script>
             navigator.geolocation.watchPosition(function(position) {
   document.getElementById('currentLat').innerHTML = position.coords.latitude;
