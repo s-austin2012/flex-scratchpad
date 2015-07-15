@@ -48,18 +48,18 @@
 <form class="myForm">
   <fieldset>
     <legend>Modified EDX Example use of the validation API</legend>
- <label for="password1" >Password:</label> <input type="password" id="password1" oninput="checkPasswords()" required>
+ <label for="latitude" >latitude:</label> <input type="text" id="latitude" oninput="populateLatitude()">
  <p>
- <label for="password2">Repeat password:</label> <input type="password" id="password2" oninput="checkPasswords()" required>
+ <label for="longitude">longitude:</label> <input type="text" id="longitude" oninput="populateLongitude()" required>
  <p>
    <button>Submit</button>
   </fieldset>
 </form>
 
 <script> 
- function checkPasswords() {
- var password1 = document.getElementById('password1');
- var password2 = document.getElementById('password2');
+ function populateCoords() {
+ var latitude = document.getElementById('latitude');
+ var longitude = document.getElementById('longitude');
  if (password1.value != password2.value) {
  password2.setCustomValidity('Passwords non identiques');
  } else {
