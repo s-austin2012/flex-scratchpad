@@ -72,6 +72,15 @@ else {
 };
           </script>
         </section>
+        <section>
+          <h3>Step Five: Monitor the Users Location</h3>
+          <script>
+            navigator.geolocation.watchPosition(function(position) {
+  document.getElementById('currentLat').innerHTML = position.coords.latitude;
+  document.getElementById('currentLon').innerHTML = position.coords.longitude;
+});
+          </script>
+        </section>
       </article>
     </main>
     <aside itemscope itemtype="http://schema.org/CreativeWork">
