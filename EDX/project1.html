@@ -158,17 +158,31 @@
         console.log("latitude = " + latitude);
         console.log("longitude = " + longitude);
  </script>
+ 
+  	<form>
+  
+	<fieldset>
+  <legend>Locate me with Lat Long</legend>
+<p id="msg2">Click the button to get your coordinates:</p>
+    <p id="address2"></p>
+ 
+    <button type="button" onclick="getLocation()">Where am I ?</button>
+      <div id="map_canvas2" style="width: 500px; height: 300px"></div>
+</fieldset>
+ 
+ 
+ 
  </section>
 		
 		
 		
 		
 		
-		<section>
-  <header><h4>Example of the use of Google reverse geocoder + try to fill some address input fields. Original code by John Hollamby.</h4></header>
- <form>
+	<section>
+  		<header><h4>Example of the use of Google reverse geocoder + try to fill some address input fields. Original code by John Hollamby.</h4></header>
+ 	<form>
   
-<fieldset>
+	<fieldset>
   <legend>Locate me</legend>
 <p id="msg">Click the button to get your coordinates:</p>
     <p id="address"></p>
