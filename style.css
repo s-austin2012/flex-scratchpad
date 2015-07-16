@@ -1,13 +1,6 @@
 main, body {
   font-family:Arial;
-}
-header {
-  color: #ffffff;
-  background:#00ccff;
-}
-footer {
-  color: #ffffff;
-  background:#0099cc;
+  color:#993300;
 }
         
  /* below section on skip for screen readers and visually impaired is from http://webaim.org/techniques/css/invisiblecontent/ */        
@@ -42,8 +35,9 @@ height:auto;
 /*end online offline status indicator styling */ 
   
 button {
-  background:#000000;
+  background:#ffffff;
 }
+
 /* myForm from EDX example on forms */
  .myForm input:invalid { background-color: lightPink;}
   .myForm input:valid { background-color:lightGreen; }
