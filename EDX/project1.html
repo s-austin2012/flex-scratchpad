@@ -72,7 +72,7 @@
         });
     }     
       
-      var country, postalCode, state, route, streetNumber, locality, areaLvl1, areaLvl2; lati; longi;
+      var country, postalCode, state, route, streetNumber, locality, areaLvl1, areaLvl2; glat; glong;
       
       function parseResult(result) {
         for(i in result){
@@ -86,7 +86,6 @@
           if(result[i].types[0] == 'country')
             country= result[i].long_name;
           if(result[i].types[0] == 'street_number')
-           
             streetNumber= result[i].long_name;
           if(result[i].types[0] == 'route')
             route= result[i].long_name;
@@ -98,10 +97,10 @@
             arealLvl2= result[i].long_name;
           if(result[i].types[0] == 'administrative_area_level_1')
             areaLvl1= result[i].long_name;
-             if(result[i].types[0] == 'latitude')
-            glatitude = result[i].long_name;
-             if(result[i].types[0] == 'longitude')
-            glongitude = result[i].long_name;
+          if(result[i].types[0] == 'latitude')
+            glat = result[i].long_name;
+          if(result[i].types[0] == 'longitude')
+            glong = result[i].long_name;
             
             
         }
@@ -113,8 +112,8 @@
         console.log("locality = " + locality);
         console.log("Administrative area level 1 " + areaLvl1);
         console.log("Administrative area level 2 " + areaLvl2);
-        console.log("Latitude " + glatitude);
-        console.log("Longitude " + glongitude);
+        console.log("Latitude " + glat);
+        console.log("Longitude " + glong);
         
         // fill input fields now, check if variables are undefined
         if((route != undefined) && (streetNumber != undefined)) {
