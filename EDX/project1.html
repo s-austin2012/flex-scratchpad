@@ -69,12 +69,28 @@
     <section>
       <header><h4>Step Two: Capture the geolocation information</h4></header>
       <!-- uses code from EDX lesson on getting coordinates -->
-        <h4>Example from EDX Course: Clicking a button to get coordinates.</h4>
+        <h4>Example from lesson 6.6 of EDX Course: Clicking a button to get coordinates.</h4>
         <h5>I added form labels and names to strengthen accessibility for blind users.</h5>
         <h5>Even though latitude and longitude are "numbers" prepare the form to populate as text -- more forgiving than numbers data type, and not all browswers support no-validate.</h5>
         <h4 id="msg">Click the button to get your coordinates:</h4>
           <label for="geolocation">
           <button onclick="getLocation()" name="geolocation" id="geolocation">Where am I ?</button></label>
+          <script>
+          var displayCoords=document.getElementById("msg");
+  
+            function getLocation() {
+            if (navigator.geolocation) {
+             navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+             displayCoords.innerHTML="Geolocation API not supported by your browser.";
+            }
+          }
+  
+          function showPosition(position) {
+          displayCoords.innerHTML="Latitude: " + position.coords.latitude + 
+          "<br />Longitude: " + position.coords.longitude;	
+          }
+          </script>
     </section>
       
       
@@ -142,7 +158,7 @@ oninput="localStorage.lslatitude=this.value;"
   </footer>
     <script src="scripts/monitor.js"></script>
     <script src="scripts/status.js"></script>
-    <script src="scripts/edx-coords1.js"></script>
+    <!-- <script src="scripts/edx-coords1.js"></script> -->
   </body>
 </html>
          
