@@ -36,7 +36,7 @@ height:auto;
   
 button {
   background:#000000;
-  color:#ffffff;
+  color:#fff;
 }
 /* myForm from EDX example on forms */
  .myForm input:invalid { background-color: lightPink;}
