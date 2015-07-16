@@ -156,13 +156,14 @@ oninput="localStorage.lslatitude=this.value;"
 
       
       <h5>Example Map From EDX</h5>
+      <h6>Note: Functions renamed so as not to conflict with earlier instance of getLocation()</h6>
       <p id="demo">Click the button to get your position:</p>
-<button onclick="getLocation()">EDX example</button>
+<button onclick="demogetLocation()">EDX example</button>
 <div id="mapholder"></div>
   
 <script>
 var x=document.getElementById("demo");
-function getLocation()
+function demogetLocation()
   {
   if (navigator.geolocation)
     {
@@ -171,7 +172,7 @@ function getLocation()
   else{x.innerHTML="Geolocation is not supported by this browser.";}
   }
 
-function showPosition(position)
+function demoshowPosition(position)
   {
   var latlon=position.coords.latitude+","+position.coords.longitude;
 
@@ -212,7 +213,6 @@ function showError(error)
   </footer>
     <script src="scripts/monitor.js"></script>
     <script src="scripts/status.js"></script>
-    <!-- <script src="scripts/edx-coords1.js"></script> -->
   </body>
 </html>
          
