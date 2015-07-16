@@ -99,9 +99,9 @@
           if(result[i].types[0] == 'administrative_area_level_1')
             areaLvl1= result[i].long_name;
              if(result[i].types[0] == 'latitude')
-            postalCode = result[i].long_name;
+            glatitude = result[i].long_name;
              if(result[i].types[0] == 'longitude')
-            postalCode = result[i].long_name;
+            glongitude = result[i].long_name;
             
             
         }
@@ -113,6 +113,8 @@
         console.log("locality = " + locality);
         console.log("Administrative area level 1 " + areaLvl1);
         console.log("Administrative area level 2 " + areaLvl2);
+        console.log("Latitude " + glatitude);
+        console.log("Longitude " + glongitude);
         
         // fill input fields now, check if variables are undefined
         if((route != undefined) && (streetNumber != undefined)) {
