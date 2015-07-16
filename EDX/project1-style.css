@@ -35,11 +35,9 @@ height:auto;
 /*end online offline status indicator styling */ 
   
 button {
-  background:#000000;
+  background:#ffffff;
 }
-button -> a, a:active, a:hover, a:focus {
-  color:#ffffff;
-}
+
 /* myForm from EDX example on forms */
  .myForm input:invalid { background-color: lightPink;}
   .myForm input:valid { background-color:lightGreen; }
