@@ -1,14 +1,6 @@
 main, body {
   font-family:Arial;
 }
-header {
-  color: #ffffff;
-  background:#00ccff;
-}
-footer {
-  color: #ffffff;
-  background:#0099cc;
-}
         
  /* below section on skip for screen readers and visually impaired is from http://webaim.org/techniques/css/invisiblecontent/ */        
 #skip a {
