@@ -139,6 +139,13 @@
  	<headeR><h4>My Attempt</h4></header>
  <script>
      var latitude, longitude;
+       function getLocation2() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else {
+          displayCoords.innerHTML="Geolocation API not supported by your browser.";
+       }
+     }
       
       function parseResult2(result2) {
       
@@ -163,10 +170,10 @@
   
 	<fieldset>
   <legend>Locate me with Lat Long</legend>
-<p id="msg2">Click the button to get your coordinates:</p>
-    <p id="address2"></p>
+	<p id="msg2">Click the button to get your coordinates:</p>
+    	<p id="address2"></p>
  
-    <button type="button" onclick="getLocation()">Where am I ?</button>
+    <button type="button" onclick="getLocation2()">Where am I 2?</button>
       <div id="map_canvas2" style="width: 500px; height: 300px"></div>
 </fieldset>
  
