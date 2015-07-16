@@ -2,7 +2,7 @@
 <html>
 <head>
    <title>Example of geolocation withy auto-fill</title>
-   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
   
     <!--MB code for reverse geolocation-->
     <script>
@@ -35,7 +35,7 @@
         myAddress = document.getElementById("address");
         
         geocoder = new google.maps.Geocoder();
-        var latlng = new google.maps.LatLng(27.7, -82.6);
+        var latlng = new google.maps.LatLng(34.0144, -6.83);
         var mapOptions = {
           zoom: 8,
           center: latlng,
@@ -72,7 +72,7 @@
         });
     }     
       
-      var country, postalCode, state, route, streetNumber, locality, areaLvl1, areaLvl2; glat; glong;
+      var country, postalCode, state, route, streetNumber, locality, areaLvl1, areaLvl2;
       
       function parseResult(result) {
         for(i in result){
@@ -86,6 +86,7 @@
           if(result[i].types[0] == 'country')
             country= result[i].long_name;
           if(result[i].types[0] == 'street_number')
+           
             streetNumber= result[i].long_name;
           if(result[i].types[0] == 'route')
             route= result[i].long_name;
@@ -97,12 +98,6 @@
             arealLvl2= result[i].long_name;
           if(result[i].types[0] == 'administrative_area_level_1')
             areaLvl1= result[i].long_name;
-          if(result[i].types[0] == 'latitude')
-            glat = result[i].long_name;
-          if(result[i].types[0] == 'longitude')
-            glong = result[i].long_name;
-            
-            
         }
         // MICHEL BUFFA : added this for debugging in the console
         console.log("postalCode = " + postalCode);
@@ -112,8 +107,6 @@
         console.log("locality = " + locality);
         console.log("Administrative area level 1 " + areaLvl1);
         console.log("Administrative area level 2 " + areaLvl2);
-        console.log("Latitude " + glat);
-        console.log("Longitude " + glong);
         
         // fill input fields now, check if variables are undefined
         if((route != undefined) && (streetNumber != undefined)) {
@@ -135,15 +128,7 @@
         if(areaLvl1 != undefined) {
           console.log("let's fill the State/Region");
           document.querySelector("#address3").value =  areaLvl1;
-        }
-        if(glat != undefined) {
-          console.log("let's fill the Latitude");
-          document.querySelector("#latitude").value =  glat;
-        }
-        if(glong != undefined) {
-          console.log("let's fill the Longitude");
-          document.querySelector("#longitude").value =  glong;
-        }
+        } 
       }
     </script>
 </head>
@@ -186,20 +171,9 @@
      <label for="country">Country *</label>
      <input id="country" name="country" type="text" required />
     </li>
-       <li>
-     <label for="latitude">Latitude*</label>
-     <input id="latitude" name="latitude" type="text" required />
-    </li>
-       <li>
-     <label for="longitude">Longitude *</label>
-     <input id="longitude" name="longitude" type="text" required />
-    </li>
    </ol>
   </fieldset>
 
  </form>
 </body>
 </html>
-
-     
-  
