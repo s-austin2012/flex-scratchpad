@@ -9,9 +9,10 @@
       <link rel="stylesheet" href="project1-normalize.css">
       <!-- EDX example of populating a form from geocoordinates here -->
       <!-- Need to check had function onload="init()" and now in body two onload events -->
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>    
-     <!--MB code for reverse geolocation-->
-      <script>
+       <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>    
+     <!-- MB code for reverse geolocation -->
+     
+<script>
        var displayCoords, myAddress; 
   
        function getLocation() {
@@ -21,7 +22,9 @@
           displayCoords.innerHTML="Geolocation API not supported by your browser.";
        }
      }
+  
       // Called when position is available
+      
         function showPosition(position) {
         displayCoords.innerHTML="Latitude: " + position.coords.latitude + 
             "<br />Longitude: " + position.coords.longitude;    
