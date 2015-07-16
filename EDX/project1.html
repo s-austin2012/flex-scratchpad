@@ -124,23 +124,6 @@
   </fieldset>
 </form>
 
-<script> 
- function populateCoords() {
- var latitude = document.getElementById('latitude');
- var longitude = document.getElementById('longitude');
- if (password1.value != password2.value) {
- password2.setCustomValidity('Passwords non identiques');
- } else {
- password2.setCustomValidity('');
- }
- }
-</script>
-<h4>Below, just working out some ideas.  Storing latitude and longitude as local storage variables.</h4>
-<script>
-  var lslatitude = localStorage.latitude;
-  var lslongitude = localStorage.longitude;
-</script>
-<h4>Yet more to keep in mind: oninput</h4>
 <script>
 oninput="localStorage.lslatitude=this.value;"
  </script>
