@@ -59,6 +59,18 @@
    background: #006699;
    }
  
+  #main > header {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #8888bb;
+   border-radius: 7pt;
+   background: #ffffff;
+   -webkit-flex: 1 6 20%;
+           flex: 1 6 20%;
+   -webkit-order: 3;
+           order: 3;
+   }
+ 
   /* Too narrow to support three columns */
   @media all and (max-width: 640px) {
   
