@@ -9,7 +9,7 @@
       <link rel="stylesheet" href="project1-normalize.css">
       <!-- EDX example of populating a form from geocoordinates here -->
       <!-- Need to check had function onload="init()" and now in body two onload events -->
-            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>    
+            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>    
     <script>
        // p elements for displaying lat / long and address
        var displayCoords, myAddress; 
@@ -226,7 +226,7 @@
     </head>
     <body ononline="update(true)"
        onoffline="update(false)"
-       onload="update(navigator.onLine)" onload="init()" onload="initialize()">
+       onload="update(navigator.onLine);init();initialize();">
       <!-- source of above: http://www.w3.org/TR/html5/sections.html -->
       <p style="margin-left:15px;">You are: <span id="status">(Unknown)</span></p>
     <header>
@@ -288,11 +288,11 @@
         <h4>Example from lesson 6.6 of EDX Course: Clicking a button to get coordinates.</h4>
         <h5>I added form labels and names to strengthen accessibility for blind users.</h5>
         <h5>Even though latitude and longitude are "numbers" prepare the form to populate as text -- more forgiving than numbers data type, and not all browswers support no-validate.</h5>
-        <h4 id="msg">Click the button to get your coordinates:</h4>
+        <h4 id="msg1">Click the button to get your coordinates:</h4>
           <label for="geolocation">
           <button onclick="getLocation()" name="geolocation" id="geolocation">Where am I ?</button></label>
           <script>
-          var displayCoords=document.getElementById("msg");
+          var displayCoords=document.getElementById("msg1");
   
             function getLocation() {
             if (navigator.geolocation) {
@@ -325,8 +325,51 @@
      <section>
       <header><h4>Step Three: Autopopulate a Form</h4></header>
           <h4>Based on EDX Lesson 6</h4>
-          
+          <!-- EDX form example starts here -->
+          <h4>Example of the use of Google reverse geocoder + try to fill some address input fields. Original code by John Hollamby.</h4>
+ <form>
+  
+<fieldset>
+  <legend>Locate me</legend>
+<p id="msg">Click the button to get your coordinates:</p>
+    <p id="address"></p>
+ 
+    <button type="button" onclick="getLocation()">Where am I ?</button>
+      <div id="map_canvas" style="width: 500px; height: 300px"></div>
+</fieldset>
+   <fieldset>
+   <legend>Address</legend>
+   <ol>		   			
+    <li>
+     <label for="address1">Street Address *</label>
+     <input id="address1" name="street_address" type="text" required />
+    </li>
+	<li>
+      <label for="address2">Suburb *</label>
+     <input id="address2" name="suburb" type="text" required />
+    </li>
+	<li>
+      <label for="address3">State *</label>
+     <input id="address3" name="state" type="text" required />
+    </li>		   
+    <li>
+     <label for="postcode">Postcode *</label>
+     <input id="postcode" name="postcode" type="number" min="1001" max="999999" required />
+     <p class="validation01">
+      <span class="invalid">Your postcode is out of range between 1001 - 999999</span>
+       <span class="valid">Your postcode is in the correct range</span>
+     </p> 
+    </li>
+    <li>
+     <label for="country">Country *</label>
+     <input id="country" name="country" type="text" required />
+    </li>
+   </ol>
+  </fieldset>
 
+ </form>
+          
+          <!-- EDX form example ends here -->
       </section>
   </article>
       <nav id="sitenav">      
@@ -340,7 +383,7 @@
           <h4>Aside</h4> 
               <h5>Note 1: Unlinked content in nav and aside over-flow text in footer area when collapsed.  Linked content is not accessible.  Both these items need to be addressed.</h5>
               <h5>Note 2: Border around header elements do not change size even though heading size changes.  Needs to be addressed.</h5>
-        <h5 id="geomap">Test Map One</h5>
+              <h5>Test Map One</h5>
           <label for="geomap">
           <button onclick="showMap()" name="geomap" id="geomap">Show Map</button></label>
           <script>
@@ -368,5 +411,5 @@
   </body>
 </html>
          
-               
+                 
      
