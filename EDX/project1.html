@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-  <html manifest="manifest.appcache" data-revision="1.0" lang="en">
-    <head>
-      <meta charset="utf-8">
-      <title>HTML5 | EDX Project1</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="project1-flex.css">
-      <link rel="stylesheet" href="project1-style.css">
-      <link rel="stylesheet" href="project1-normalize.css">
-      <!-- EDX example of populating a form from geocoordinates here -->
-      <!-- Need to check had function onload="init()" and now in body two onload events -->
-       <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>    
-     <!-- MB code for reverse geolocation -->
-     
-<script>
+<html>
+<head>
+   <title>Example of geolocation withy auto-fill</title>
+   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  
+    <!--MB code for reverse geolocation-->
+    <script>
        var displayCoords, myAddress; 
   
        function getLocation() {
@@ -23,9 +16,9 @@
        }
      }
   
+  
       // Called when position is available
-      
-        function showPosition(position) {
+    function showPosition(position) {
         displayCoords.innerHTML="Latitude: " + position.coords.latitude + 
             "<br />Longitude: " + position.coords.longitude;    
         showOnGoogleMap(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
@@ -138,113 +131,51 @@
         } 
       }
     </script>
-    </head>
-    <body ononline="update(true)"
-       onoffline="update(false)"
-       onload="update(navigator.onLine);initialize();">
-      <!-- source of above: http://www.w3.org/TR/html5/sections.html -->
-      <p style="margin-left:15px;">You are: <span id="status">(Unknown)</span></p>
-    <header>
-      <h1 style="margin-left:15px;">
-        <a href="https://red-hound.github.io/EDX/project1.html">EDX Form Project One</a>
-      </h1>
-      <nav id="skip">
-        <h4><a href="#main">Skip to Main Content</a></h4>
-      </nav> 
-     </header>
-
+</head>
+<body onload="initialize()">
+  <h1>Example of the use of Google reverse geocoder + try to fill some address input fields. Original code by John Hollamby.</h1>
+ <form>
+  
+<fieldset>
+  <legend>Locate me</legend>
+<p id="msg">Click the button to get your coordinates:</p>
+    <p id="address"></p>
  
+    <button type="button" onclick="getLocation()">Where am I ?</button>
+      <div id="map_canvas" style="width: 500px; height: 300px"></div>
+</fieldset>
+   <fieldset>
+   <legend>Address</legend>
+   <ol>		   			
+    <li>
+     <label for="address1">Street Address *</label>
+     <input id="address1" name="street_address" type="text" required />
+    </li>
+	<li>
+      <label for="address2">Suburb *</label>
+     <input id="address2" name="suburb" type="text" required />
+    </li>
+	<li>
+      <label for="address3">State *</label>
+     <input id="address3" name="state" type="text" required />
+    </li>		   
+    <li>
+     <label for="postcode">Postcode *</label>
+     <input id="postcode" name="postcode" type="number" min="1001" max="999999" required />
+     <p class="validation01">
+      <span class="invalid">Your postcode is out of range between 1001 - 999999</span>
+       <span class="valid">Your postcode is in the correct range</span>
+     </p> 
+    </li>
+    <li>
+     <label for="country">Country *</label>
+     <input id="country" name="country" type="text" required />
+    </li>
+   </ol>
+  </fieldset>
 
-  <main id="main">
-      
-  <article><h2>A Test Form For a Friend</h2>
-     <section>
-      <header><h4>Step Three: Autopopulate a Form</h4></header>
-          <h4>Based on EDX Lesson 6</h4>
-          <!-- EDX form example starts here -->
-          <h4>Example of the use of Google reverse geocoder + try to fill some address input fields. Original code by John Hollamby.</h4>
-	<h4>Example of the use of Google reverse geocoder + try to fill some address input fields. Original code by John Hollamby.</h4>
- 	<form>
-		<fieldset>
-  		<legend>Locate me</legend>
-    		<p id="msg">Click the button to get your coordinates:</p>
-    		<p id="address"></p>
-               <button type="button" onclick="getLocation()">Where am I ?</button>
-             <div id="map_canvas" style="width: 500px; height: 300px"></div>
-             </fieldset>
-             <fieldset>
-   	   	<legend>Address</legend>
-   		<ol>		   			
-    		<li>
-     		<label for="address1">Street Address *</label>
-     		<input id="address1" name="street_address" type="text" required />
-    		</li>
-		<li>
-      		<label for="address2">Suburb *</label>
-     		<input id="address2" name="suburb" type="text" required />
-    		</li>
-		<li>
-      		<label for="address3">State *</label>
-     		<input id="address3" name="state" type="text" required />
-    		</li>		   
-    		<li>
-     		<label for="postcode">Postcode *</label>
-     		<input id="postcode" name="postcode" type="number" min="1001" max="999999" required />
-     		<p class="validation01">
-      		<span class="invalid">Your postcode is out of range between 1001 - 999999</span>
-       		<span class="valid">Your postcode is in the correct range</span>
-     		</p> 
-    		</li>
-		 <li>
-     		<label for="country">Country *</label>
-     		<input id="country" name="country" type="text" required />
-    		</li>
-   		</ol>
-  		</fieldset>
-
- 		</form>
-          
-          <!-- EDX form example ends here -->
-      </section>
-  </article>
-      <nav id="sitenav">      
-      <h4>Site Nav</h4>
-      <ul>
-        <li><a href="#main">Main</a></li>
-        <li><a href="#references">References</a></li>
-      </ul>
-    </nav>
-    <aside>
-          <h4>Aside</h4> 
-              <h5>Note 1: Unlinked content in nav and aside over-flow text in footer area when collapsed.  Linked content is not accessible.  Both these items need to be addressed.</h5>
-              <h5>Note 2: Border around header elements do not change size even though heading size changes.  Needs to be addressed.</h5>
-              <h5>Test Map One</h5>
-          <label for="geomap">
-          <button onclick="showMap()" name="geomap" id="geomap">Show Map</button></label>
-          <script>
-        <script>
-        var displayMap=document.getElementById("geomap");
-          function showMap(position) {
-          // Show a map centered at (position.coords.latitude, position.coords.longitude).
-          // One-shot position request.
-          navigator.geolocation.getCurrentPosition(showMap);
-          }
-    </script>
-    </aside>
-
-  </main>
-  <footer  id="references">
-    <h4>References</h4>
-    <ul>
-      <li><a href="http://diveintohtml5.info/offline.html">Cache Manifest</a></li>
-      <li><a href="http://westciv.com/tools/manifestR/">Make a Manifest Tool</a></li>
-      <li><a href="http://appcache.offline.technology/">Appcache Online</a></li>
-    </ul>
-  </footer>
-    <script src="scripts/monitor.js"></script>
-    <script src="scripts/status.js"></script>
-  </body>
+ </form>
+</body>
 </html>
-           
-                    
+
      
