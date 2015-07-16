@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+  <html manifest="manifest.appcache" data-revision="1.0" lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>HTML5 | EDX Project1</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="project1-flex.css">
+      <link rel="stylesheet" href="project1-style.css">
+      <link rel="stylesheet" href="project1-normalize.css">
+    </head>
+    <body ononline="update(true)"
+       onoffline="update(false)"
+       onload="update(navigator.onLine)">
+      <!-- source of above: http://www.w3.org/TR/html5/sections.html -->
+      <p style="margin-left:15px;">You are: <span id="status">(Unknown)</span></p>
+    <header>
+      <h1 style="margin-left:15px;">
+        <a href="https://red-hound.github.io/EDX/index.html">EDX Form Project One</a>
+      </h1>
+      <nav id="skip">
+        <h4><a href="#main">Skip to Main Content</a></h4>
+      </nav> 
+     </header>
+
+ 
+
+  <main id="main">
+      
+  <article><h2>A Test Form For a Friend</h2>
+    <section>
+      <header><h3>Section One: Purpose of the Form</h3></header>
+      <h4>Send geolocation information to rescue authorities.</h4>
+      <h5>This idea is based on one from a friend with multiple disabilities, who suggested that in event of fire, rescue agencies should be able to take advantage of geolocation information on his phone.</h5>
+        <ul>
+          <li>Prepare Using the WebStorageAPI</li>
+          <li>Capture the geolocation information</li>
+          <li>Prepopulate the geolocation into form fields</li>
+          <li>Send the geolocation information out to authorities.</li>
+        </ul>
+    </section>
+    <section>
+      <header><h3>Section Two: Prepare Using the WebStorage API</h3></header>
+      <h4>Use Local Storage rather than Session Storage -- greater data longevity</h4>
+      <h5>Embedded script from EDX 6.4.1 stores variables last name, first name, location, and added latitude and longitude.</h5>
+       <script>
+    // Using localStorage
+    // store data
+    localStorage.lastName = "Last Name";
+    localStorage.firstName = "First Name";
+    localStorage.location = "Location";
+    localStorage.latitude = "Latitude";
+    localStorage.longitude = "Longitude";
+    
+    // retrieve data
+    var lastName = localStorage.lastName;
+    var firstName = localStorage.firstName;
+    var location = localStorage.location;
+    var latitude = localStorage.latitude;
+    var longitude = localStorage.longitude;
+    
+    console.log("lastName just retrieved from the localStorage of your browser, for this particular web site: " + lastName);
+    </script>
+    </section>
+      
+    <section>
+      <header><h3>Section Three: Capture the geolocation information</h3></header>
+      <!-- uses code from EDX lesson on getting coordinates -->
+        <h4>Example from EDX Course: Clicking a button to get coordinates.</h4>
+        <h5>I added form labels and names to strengthen accessibility for blind users.</h5>
+        <h5>Even though latitude and longitude are "numbers" prepare the form to populate as text -- more forgiving than numbers data type, and not all browswers support no-validate.</h5>
+        <h4 id="msg">Click the button to get your coordinates:</h4>
+          <label for="geolocation">
+          <button onclick="getLocation()" name="geolocation" id="geolocation">Where am I ?</button></label>
+    </section>
+      
+      
+      
+     <section>
+      <header><h3>Section Three: Autopopulate a form?</h3></header>
+          <h4>Modified EDX Example Validation API</h4>
+          <h4>Here, we remove validation requirements so that those with disabilities can send the form in a hurry.</h4>
+          <h4>If no validate was added to the form class, the colored background is removed</h4>
+          <h4>"Required" was removed</h4>
+
+<form class="myForm">
+  <fieldset>
+    <legend>Modified EDX Example use of the validation API</legend>
+ <label for="latitude" >latitude:</label> <input type="text" id="latitude" oninput="populateLatitude()">
+ <p>
+ <label for="longitude">longitude:</label> <input type="text" id="longitude" oninput="populateLongitude()">
+ <p>
+   <button>Submit</button>
+  </fieldset>
+</form>
+
+<script> 
+ function populateCoords() {
+ var latitude = document.getElementById('latitude');
+ var longitude = document.getElementById('longitude');
+ if (password1.value != password2.value) {
+ password2.setCustomValidity('Passwords non identiques');
+ } else {
+ password2.setCustomValidity('');
+ }
+ }
+</script>
+<h4>Below, just working out some ideas.  Storing latitude and longitude as local storage variables.</h4>
+<script>
+  var lslatitude = localStorage.latitude;
+  var lslongitude = localStorage.longitude;
+</script>
+<h4>Yet more to keep in mind: oninput</h4>
+<script>
+oninput="localStorage.lslatitude=this.value;"
+ </script>
+      </section>
+  </article>
+      <nav id="sitenav">      
+      <h4>Site Nav</h4>
+      <h5>Note: Collapsed State hides links.  Needs to be an accessible, expandable accordian.  Fix this.</h5>
+      <ul>
+        <li><a href="#main">Main</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+      <h5>Test Content in Nav to see if it overflows into footer when collapsed.</h5>
+    </nav>
+  <aside>
+    <h4>Aside</h4>
+    <h5>Note: Collapsed States over-runs content in Aside to below footer.  This needs to be addressed.</h5>
+    </aside>
+  </main>
+  <footer  id="references">
+    <h4>References</h4>
+    <ul>
+      <li><a href="http://diveintohtml5.info/offline.html">Cache Manifest</a></li>
+      <li><a href="http://westciv.com/tools/manifestR/">Make a Manifest Tool</a></li>
+      <li><a href="http://appcache.offline.technology/">Appcache Online</a></li>
+    </ul>
+  </footer>
+    <script src="scripts/monitor.js"></script>
+    <script src="scripts/status.js"></script>
+    <script src="scripts/edx-coords1.js"></script>
+  </body>
+</html>
+       
