@@ -9,9 +9,9 @@
       <link rel="stylesheet" href="project1-normalize.css">
       <!-- EDX example of populating a form from geocoordinates here -->
       <!-- Need to check had function onload="init()" and now in body two onload events -->
-            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>    
-    <!--MB code for reverse geolocation-->
-    <script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>    
+     <!--MB code for reverse geolocation-->
+      <script>
        var displayCoords, myAddress; 
   
        function getLocation() {
@@ -21,10 +21,8 @@
           displayCoords.innerHTML="Geolocation API not supported by your browser.";
        }
      }
-  
-  
       // Called when position is available
-    function showPosition(position) {
+        function showPosition(position) {
         displayCoords.innerHTML="Latitude: " + position.coords.latitude + 
             "<br />Longitude: " + position.coords.longitude;    
         showOnGoogleMap(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
@@ -140,7 +138,7 @@
     </head>
     <body ononline="update(true)"
        onoffline="update(false)"
-       onload="update(navigator.onLine);init();initialize();">
+       onload="update(navigator.onLine);initialize();">
       <!-- source of above: http://www.w3.org/TR/html5/sections.html -->
       <p style="margin-left:15px;">You are: <span id="status">(Unknown)</span></p>
     <header>
@@ -168,41 +166,40 @@
   		<legend>Locate me</legend>
     		<p id="msg">Click the button to get your coordinates:</p>
     		<p id="address"></p>
- 
-    <button type="button" onclick="getLocation()">Where am I ?</button>
-      <div id="map_canvas" style="width: 500px; height: 300px"></div>
-</fieldset>
-   <fieldset>
-   <legend>Address</legend>
-   <ol>		   			
-    <li>
-     <label for="address1">Street Address *</label>
-     <input id="address1" name="street_address" type="text" required />
-    </li>
-	<li>
-      <label for="address2">Suburb *</label>
-     <input id="address2" name="suburb" type="text" required />
-    </li>
-	<li>
-      <label for="address3">State *</label>
-     <input id="address3" name="state" type="text" required />
-    </li>		   
-    <li>
-     <label for="postcode">Postcode *</label>
-     <input id="postcode" name="postcode" type="number" min="1001" max="999999" required />
-     <p class="validation01">
-      <span class="invalid">Your postcode is out of range between 1001 - 999999</span>
-       <span class="valid">Your postcode is in the correct range</span>
-     </p> 
-    </li>
-    <li>
-     <label for="country">Country *</label>
-     <input id="country" name="country" type="text" required />
-    </li>
-   </ol>
-  </fieldset>
+               <button type="button" onclick="getLocation()">Where am I ?</button>
+             <div id="map_canvas" style="width: 500px; height: 300px"></div>
+             </fieldset>
+             <fieldset>
+   	   	<legend>Address</legend>
+   		<ol>		   			
+    		<li>
+     		<label for="address1">Street Address *</label>
+     		<input id="address1" name="street_address" type="text" required />
+    		</li>
+		<li>
+      		<label for="address2">Suburb *</label>
+     		<input id="address2" name="suburb" type="text" required />
+    		</li>
+		<li>
+      		<label for="address3">State *</label>
+     		<input id="address3" name="state" type="text" required />
+    		</li>		   
+    		<li>
+     		<label for="postcode">Postcode *</label>
+     		<input id="postcode" name="postcode" type="number" min="1001" max="999999" required />
+     		<p class="validation01">
+      		<span class="invalid">Your postcode is out of range between 1001 - 999999</span>
+       		<span class="valid">Your postcode is in the correct range</span>
+     		</p> 
+    		</li>
+		 <li>
+     		<label for="country">Country *</label>
+     		<input id="country" name="country" type="text" required />
+    		</li>
+   		</ol>
+  		</fieldset>
 
- </form>
+ 		</form>
           
           <!-- EDX form example ends here -->
       </section>
