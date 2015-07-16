@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Example of geolocation withy auto-fill</title>
+   <title>EDX Project | Geolocation withy auto-fill</title>
    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-  
     <!--MB code for reverse geolocation-->
     <script>
        var displayCoords, myAddress; 
@@ -135,8 +134,38 @@
 <body onload="initialize()">
 <main>
 	<article>
+		<h2>Build an autofill for Lat Long</h2>
+		 <section>
+ 	<h4>My Attempt</h4>
+ <script>
+     var latitude, longitude;
+      
+      function parseResult2(result2) {
+      
+        for(i in result2){
+          // Let's print all the data we can collect from the reverse geocoder,
+          // Look at the debug console to see what we get...
+          console.log("type = " + result[i].types[0] + " long_name = " + 
+                       result2[i].long_name);
+                       
+            if(result2[i].types[0] == 'latitude')
+            latitude = result[i].long_name;
+            if(result2[i].types[0] == 'longitude')
+            longitude= result[i].long_name;
+              }
+              
+                // Follow MICHEL BUFFA lead : added this for debugging in the console
+        console.log("latitude = " + latitude);
+        console.log("longitude = " + longitude);
+ </script>
+ </section>
+		
+		
+		
+		
+		
 		<section>
-  <h4>Example of the use of Google reverse geocoder + try to fill some address input fields. Original code by John Hollamby.</h4>
+  <header><h4>Example of the use of Google reverse geocoder + try to fill some address input fields. Original code by John Hollamby.</h4></header>
  <form>
   
 <fieldset>
@@ -179,30 +208,7 @@
 
  </form>
  </section>
- <section>
- 	<h4>My Attempt</h4>
- <script>
-     var latitude, longitude;
-      
-      function parseResult2(result2) {
-      
-        for(i in result2){
-          // Let's print all the data we can collect from the reverse geocoder,
-          // Look at the debug console to see what we get...
-          console.log("type = " + result[i].types[0] + " long_name = " + 
-                       result2[i].long_name);
-                       
-            if(result2[i].types[0] == 'latitude')
-            latitude = result[i].long_name;
-            if(result2[i].types[0] == 'longitude')
-            longitude= result[i].long_name;
-              }
-              
-                // Follow MICHEL BUFFA lead : added this for debugging in the console
-        console.log("latitude = " + latitude);
-        console.log("longitude = " + longitude);
- </script>
- </section>
+
  </article>
  </main>
 </body>
