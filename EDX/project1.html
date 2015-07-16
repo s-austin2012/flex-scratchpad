@@ -139,7 +139,13 @@ oninput="localStorage.lslatitude=this.value;"
   <aside>
     <h4>Aside</h4>
     <script>
+      function showMap(position) {
+      // Show a map centered at (position.coords.latitude, position.coords.longitude).
+      // One-shot position request.
       navigator.geolocation.getCurrentPosition(showMap);
+    }
+
+    
     </script>
     <h5>Note 1: Unlinked content in nav and aside over-flow text in footer area when collapsed.  Linked content is not accessible.  Both these items need to be addressed.</h5>
     <h5>Note 2: Border around header elements do not change size even though heading size changes.  Needs to be addressed.</h5>
