@@ -18,7 +18,7 @@
    padding: 5px;
    border: 1px solid #cccc33;
    border-radius: 7pt;
-   background: #ffffff;
+   background: #99cc99;
    -webkit-flex: 3 1 60%;
            flex: 3 1 60%;
    -webkit-order: 2;
@@ -42,7 +42,7 @@
    padding: 5px;
    border: 1px solid #8888bb;
    border-radius: 7pt;
-   background: #99cc99;
+   background: #ffffff;
    -webkit-flex: 1 6 20%;
            flex: 1 6 20%;
    -webkit-order: 3;
