@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+  <html manifest="manifest.appcache" data-revision="1.0" lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>HTML5 | EDX Project1</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="project1-flex.css">
+      <link rel="stylesheet" href="project1-style.css">
+      <link rel="stylesheet" href="project1-normalize.css">
+      <!-- EDX example of populating a form from geocoordinates here -->
+      <!-- Need to check had function onload="init()" and now in body two onload events -->
+            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>    
+    <script>
+       // p elements for displaying lat / long and address
+       var displayCoords, myAddress; 
+      
+      // used with the google apis
+      var geocoder;
+      var map;
+      var infowindow = new google.maps.InfoWindow();
+      var marker;
+      
+      // Called when the page is loaded
+      function init() {
+        displayCoords=document.getElementById("msg");
+        myAddress = document.getElementById("address");
+        
+        geocoder = new google.maps.Geocoder();
+        
+        // In order to show something even before a user clicked on the button
+        var latlng = new google.maps.LatLng(34.0144, -6.83);
+        
+        var mapOptions = {
+          zoom: 8,
+          center: latlng,
+          mapTypeId: 'roadmap'
+        }
+        map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions); 
+      }
+      
+       // Called when the button is clicked
+       function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else {
+          displayCoords.innerHTML="Geolocation API not supported by your browser.";
+       }
+     }
+  
+    // Called when a position is available
+    function showPosition(position) {
+        displayCoords.innerHTML="Latitude: " + position.coords.latitude + 
+            "<br />Longitude: " + position.coords.longitude;   
+      
+        // Display the map
+        showOnGoogleMap(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+ 
+    }
+ 
+ 
+    function showOnGoogleMap(latlng) {
+        // Ask google geocoder for a surface address once we get a longitude and 
+        // a latitude. In fact the reverse geocoder sends back an array of "guesses"
+        // i.e. not only one address object, but several. Each entry in this array
+        // has several properties like street, city, etc. We use the "formatted_address"
+        // one here, but it might be interesting to get the detailed properties in other
+        // applications like a form with street, city, zip code etc.
+        geocoder.geocode({'latLng': latlng},reverseGeocoderSuccess);
+      
+        function reverseGeocoderSuccess(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            // For debugging
+            console.dir(results);
+            
+            if (results[1]) {
+              map.setZoom(11);
+              marker = new google.maps.Marker({
+                  position: latlng,
+                  map: map
+              });
+              infowindow.setContent(results[1].formatted_address);
+              infowindow.open(map, marker);
+              
+              // Display address as text in the page
+              myAddress.innerHTML="Adress: " + results[0].formatted_address;
+            } else {
+              alert('No results found');
+            }
+          } else {
+            alert('Geocoder failed due to: ' + status);
+          }
+        } // end of reverseGeocoderSuccess
+      }  // end of showOnGoogleMap
+    </script>
+    <!-- end example of EDX example of populating a form from geocoordinates here -->
+    <!-- second set of example EDX code for getting coordinates starts here -->
+        <!--MB code for reverse geolocation-->
+    <script>
+       var displayCoords, myAddress; 
+  
+       function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else {
+          displayCoords.innerHTML="Geolocation API not supported by your browser.";
+       }
+     }
+  
+  
+      // Called when position is available
+    function showPosition(position) {
+        displayCoords.innerHTML="Latitude: " + position.coords.latitude + 
+            "<br />Longitude: " + position.coords.longitude;    
+        showOnGoogleMap(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+ 
+    }
+ 
+      var geocoder;
+      var map;
+      var infowindow = new google.maps.InfoWindow();
+      var marker;
+      
+      function initialize() {
+        displayCoords=document.getElementById("msg");
+        myAddress = document.getElementById("address");
+        
+        geocoder = new google.maps.Geocoder();
+        var latlng = new google.maps.LatLng(34.0144, -6.83);
+        var mapOptions = {
+          zoom: 8,
+          center: latlng,
+          mapTypeId: 'roadmap'
+        }
+        map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions); 
+      }
+ 
+    function showOnGoogleMap(latlng) {
+ 
+        geocoder.geocode({'latLng': latlng}, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            if (results[1]) {
+              map.setZoom(11);
+              marker = new google.maps.Marker({
+                  position: latlng,
+                  map: map
+              });
+              infowindow.setContent(results[1].formatted_address);
+              infowindow.open(map, marker);
+              
+              // Display address as text in the page
+              myAddress.innerHTML="Adress: " + results[0].formatted_address;
+              
+              // Call the function that parses the results and fills
+              // the input fields
+              parseResult(results[0].address_components);
+            } else {
+              alert('No results found');
+            }
+          } else {
+            alert('Geocoder failed due to: ' + status); 
+          }
+        });
+    }     
+      
+      var country, postalCode, state, route, streetNumber, locality, areaLvl1, areaLvl2;
+      
+      function parseResult(result) {
+        for(i in result){
+          // Let's print all the data we can collect from the reverse geocoder,
+          // Look at the debug console to see what we get...
+          console.log("type = " + result[i].types[0] + " long_name = " + 
+                       result[i].long_name);
+          if(result[i].types[0] == 'postal_code')
+            postalCode = result[i].long_name;
+          if(result[i].types[0] == 'country')
+            country= result[i].long_name;
+          if(result[i].types[0] == 'street_number')
+           
+            streetNumber= result[i].long_name;
+          if(result[i].types[0] == 'route')
+            route= result[i].long_name;
+           if(result[i].types[0] == 'locality')
+            locality= result[i].long_name;
+          if(result[i].types[0] == 'state')
+            state= result[i].long_name;
+          if(result[i].types[0] == 'administrative_area_level_2')
+            arealLvl2= result[i].long_name;
+          if(result[i].types[0] == 'administrative_area_level_1')
+            areaLvl1= result[i].long_name;
+        }
+        // MICHEL BUFFA : added this for debugging in the console
+        console.log("postalCode = " + postalCode);
+        console.log("country = " + country);
+        console.log("streetNumber = " + streetNumber);
+        console.log("route = " + route);
+        console.log("locality = " + locality);
+        console.log("Administrative area level 1 " + areaLvl1);
+        console.log("Administrative area level 2 " + areaLvl2);
+        
+        // fill input fields now, check if variables are undefined
+        if((route != undefined) && (streetNumber != undefined)) {
+          console.log("let's fill the street");
+          document.querySelector("#address1").value = streetNumber + " " + route;
+        }
+         if(locality != undefined) {
+          console.log("let's fill the city");
+          document.querySelector("#address2").value =  locality;
+        }
+        if(country != undefined) {
+          console.log("let's fill the country");
+          document.querySelector("#country").value =  country;
+        } 
+        if(postalCode != undefined) {
+          console.log("let's fill the postalCode");
+          document.querySelector("#postcode").value =  postalCode;
+        } 
+        if(areaLvl1 != undefined) {
+          console.log("let's fill the State/Region");
+          document.querySelector("#address3").value =  areaLvl1;
+        } 
+      }
+    </script>
+    <!-- second example of EDX code for getting coordinates ends here -->
+    </head>
+    <body ononline="update(true)"
+       onoffline="update(false)"
+       onload="update(navigator.onLine);init();initialize();">
+      <!-- source of above: http://www.w3.org/TR/html5/sections.html -->
+      <p style="margin-left:15px;">You are: <span id="status">(Unknown)</span></p>
+    <header>
+      <h1 style="margin-left:15px;">
+        <a href="https://red-hound.github.io/EDX/project1.html">EDX Form Project One</a>
+      </h1>
+      <nav id="skip">
+        <h4><a href="#main">Skip to Main Content</a></h4>
+      </nav> 
+     </header>
+
+ 
+
+  <main id="main">
+      
+  <article><h2>A Test Form For a Friend</h2>
+    <section>
+      <header><h3>Purpose of the Form</h3></header>
+      <h4>Send geolocation information to rescue authorities.</h4>
+      <h5>This idea is based on one from a friend with multiple disabilities, who suggested that in event of fire, rescue agencies should be able to take advantage of geolocation information on his phone.</h5>
+    </section>
+    <section>
+      <header><h3>Steps to Accomplish</h3></header>
+        <ul>
+          <li>Prepare Using the WebStorageAPI</li>
+          <li>Capture the geolocation information</li>
+          <li>Prepopulate the geolocation into form fields</li>
+          <li>Send the geolocation information out to authorities.</li>
+        </ul>
+    </section>
+    <section>
+      <header><h4>Step One: Prepare Using the WebStorage API</h4></header>
+      <h4>Use Local Storage rather than Session Storage -- greater data longevity</h4>
+      <h5>Embedded script from EDX 6.4.1 stores variables last name, first name, location, and added latitude and longitude. </h5>
+      <h5>Note: I found I had to comment out the "location" variable as it caused GitHub to say the page was not found.  Ask about this.</h5>
+       <script>
+    // Using localStorage
+    // store data
+    localStorage.lastName = "Last Name";
+    localStorage.firstName = "First Name";
+    //localStorage.location = "Location";
+    localStorage.latitude = "Latitude";
+    localStorage.longitude = "Longitude";
+    
+    // retrieve data
+    var lastName = localStorage.lastName;
+    var firstName = localStorage.firstName;
+    //var location = localStorage.location;
+    var latitude = localStorage.latitude;
+    var longitude = localStorage.longitude;
+    
+    console.log("lastName just retrieved from the localStorage of your browser, for this particular web site: " + lastName);
+    </script>
+    </section>
+      
+    <section>
+      <header><h4>Step Two: Capture the geolocation information</h4></header>
+      <!-- uses code from EDX lesson on getting coordinates -->
+        <h4>Example from lesson 6.6 of EDX Course: Clicking a button to get coordinates.</h4>
+        <h5>I added form labels and names to strengthen accessibility for blind users.</h5>
+        <h5>Even though latitude and longitude are "numbers" prepare the form to populate as text -- more forgiving than numbers data type, and not all browswers support no-validate.</h5>
+        <h4 id="msg1">Click the button to get your coordinates:</h4>
+          <label for="geolocation">
+          <button onclick="getLocation()" name="geolocation" id="geolocation">Where am I ?</button></label>
+          <script>
+          var displayCoords=document.getElementById("msg1");
+  
+            function getLocation() {
+            if (navigator.geolocation) {
+             navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+             displayCoords.innerHTML="Geolocation API not supported by your browser.";
+            }
+          }
+  
+          function showPosition(position) {
+          displayCoords.innerHTML="Latitude: " + position.coords.latitude + 
+          "<br />Longitude: " + position.coords.longitude;	
+          }
+          </script>
+          <script>
+          //Using example of local storage
+            // store data
+            localStorage.navigatorLatitude = "Navigator Latitude";
+            localStorage.navigatorLongitude = "Navigator Longitude";
+            //retrieve data
+            var navigatorLatitude = position.coords.latitude;
+            var navigatorLongitude = position.coords.longitude;
+          </script>
+          
+          
+    </section>
+      
+      
+      
+     <section>
+      <header><h4>Step Three: Autopopulate a Form</h4></header>
+          <h4>Based on EDX Lesson 6</h4>
+          <!-- EDX form example starts here -->
+          <h4>Example of the use of Google reverse geocoder + try to fill some address input fields. Original code by John Hollamby.</h4>
+ <form>
+  
+<fieldset>
+  <legend>Locate me</legend>
+<p id="msg">Click the button to get your coordinates:</p>
+    <p id="address"></p>
+ 
+    <button type="button" onclick="getLocation()">Where am I ?</button>
+      <div id="map_canvas" style="width: 500px; height: 300px"></div>
+</fieldset>
+   <fieldset>
+   <legend>Address</legend>
+   <ol>		   			
+    <li>
+     <label for="address1">Street Address *</label>
+     <input id="address1" name="street_address" type="text" required />
+    </li>
+	<li>
+      <label for="address2">Suburb *</label>
+     <input id="address2" name="suburb" type="text" required />
+    </li>
+	<li>
+      <label for="address3">State *</label>
+     <input id="address3" name="state" type="text" required />
+    </li>		   
+    <li>
+     <label for="postcode">Postcode *</label>
+     <input id="postcode" name="postcode" type="number" min="1001" max="999999" required />
+     <p class="validation01">
+      <span class="invalid">Your postcode is out of range between 1001 - 999999</span>
+       <span class="valid">Your postcode is in the correct range</span>
+     </p> 
+    </li>
+    <li>
+     <label for="country">Country *</label>
+     <input id="country" name="country" type="text" required />
+    </li>
+   </ol>
+  </fieldset>
+
+ </form>
+          
+          <!-- EDX form example ends here -->
+      </section>
+  </article>
+      <nav id="sitenav">      
+      <h4>Site Nav</h4>
+      <ul>
+        <li><a href="#main">Main</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </nav>
+    <aside>
+          <h4>Aside</h4> 
+              <h5>Note 1: Unlinked content in nav and aside over-flow text in footer area when collapsed.  Linked content is not accessible.  Both these items need to be addressed.</h5>
+              <h5>Note 2: Border around header elements do not change size even though heading size changes.  Needs to be addressed.</h5>
+              <h5>Test Map One</h5>
+          <label for="geomap">
+          <button onclick="showMap()" name="geomap" id="geomap">Show Map</button></label>
+          <script>
+        <script>
+        var displayMap=document.getElementById("geomap");
+          function showMap(position) {
+          // Show a map centered at (position.coords.latitude, position.coords.longitude).
+          // One-shot position request.
+          navigator.geolocation.getCurrentPosition(showMap);
+          }
+    </script>
+    </aside>
+
+  </main>
+  <footer  id="references">
+    <h4>References</h4>
+    <ul>
+      <li><a href="http://diveintohtml5.info/offline.html">Cache Manifest</a></li>
+      <li><a href="http://westciv.com/tools/manifestR/">Make a Manifest Tool</a></li>
+      <li><a href="http://appcache.offline.technology/">Appcache Online</a></li>
+    </ul>
+  </footer>
+    <script src="scripts/monitor.js"></script>
+    <script src="scripts/status.js"></script>
+  </body>
+</html>
