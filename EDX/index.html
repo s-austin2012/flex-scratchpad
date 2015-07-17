@@ -2,7 +2,7 @@
   <html manifest="manifest.appcache" data-revision="1.0" lang="en">
     <head>
       <meta charset="utf-8">
-      <title>HTML5 | EDX Project1</title>
+      <title>HTML5 | Working Notes</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="project1-flex.css">
       <link rel="stylesheet" href="project1-style.css">
@@ -114,14 +114,14 @@
 
   <main id="main">
       
-  <article><h2>A Test Form For a Friend</h2>
+  <article><h2>Project 1 Working Notes</h2>
     <section>
-      <header><h3>Purpose of the Form</h3></header>
+      <header><h3>Project 1: Autopopulate Form with Geolocation</h3></header>
       <h4>Send geolocation information to rescue authorities.</h4>
       <h5>This idea is based on one from a friend with multiple disabilities, who suggested that in event of fire, rescue agencies should be able to take advantage of geolocation information on his phone.</h5>
     </section>
     <section>
-      <header><h3>Steps to Accomplish</h3></header>
+      <header><h3>Project One: Steps Required</h3></header>
         <ul>
           <li>Prepare Using the WebStorageAPI</li>
           <li>Capture the geolocation information</li>
@@ -130,7 +130,7 @@
         </ul>
     </section>
     <section>
-      <header><h4>Step One: Prepare Using the WebStorage API</h4></header>
+      <header><h4>Project One Step One: Prepare Using the WebStorage API</h4></header>
       <h4>Use Local Storage rather than Session Storage -- greater data longevity</h4>
       <h5>Embedded script from EDX 6.4.1 stores variables last name, first name, location, and added latitude and longitude. </h5>
       <h5>Note: I found I had to comment out the "location" variable as it caused GitHub to say the page was not found.  Ask about this.</h5>
@@ -155,7 +155,7 @@
     </section>
       
     <section>
-      <header><h4>Step Two: Capture the geolocation information</h4></header>
+      <header><h4>Project One Step Two: Capture the geolocation information</h4></header>
       <!-- uses code from EDX lesson on getting coordinates -->
         <h4>Example from lesson 6.6 of EDX Course: Clicking a button to get coordinates.</h4>
         <h5>I added form labels and names to strengthen accessibility for blind users.</h5>
@@ -188,18 +188,11 @@
             var navigatorLatitude = position.coords.latitude;
             var navigatorLongitude = position.coords.longitude;
           </script>
-          
-          
     </section>
       
-      
-      
      <section>
-      <header><h4>Step Three: Autopopulate a Form</h4></header>
+      <header><h4>Project One Step Three: Autopopulate a Form</h4></header>
           <h4>Based on EDX Lesson 6</h4>
-          <!-- EDX form example starts here -->
-          <h4>Example of the use of Google reverse geocoder + try to fill some address input fields. Original code by John Hollamby.</h4>
- 
       </section>
   </article>
       <nav id="sitenav">      
