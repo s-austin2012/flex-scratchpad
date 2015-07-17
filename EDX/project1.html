@@ -1,237 +1,57 @@
-<!DOCTYPE html>
-<html>
-<head>
-   <title>EDX Project | Geolocation withy auto-fill</title>
-   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-    <!--MB code for reverse geolocation-->
-    <script>
-       var displayCoords, myAddress; 
-  
-       function getLocation() {
-          if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-          } else {
-          displayCoords.innerHTML="Geolocation API not supported by your browser.";
-       }
-     }
-  
-  
-      // Called when position is available
-    function showPosition(position) {
-        displayCoords.innerHTML="Latitude: " + position.coords.latitude + 
-            "<br />Longitude: " + position.coords.longitude;    
-        showOnGoogleMap(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
- 
-    }
- 
-      var geocoder;
-      var map;
-      var infowindow = new google.maps.InfoWindow();
-      var marker;
+<!DOCTYPE html>   
+  <html manifest="manifest.appcache" data-revision="1.0" lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>HTML5 | EDX Test Site</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="home-flex.css">
+      <link rel="stylesheet" href="home-normalize.css">
+      <link rel="stylesheet" href="home-style.css">
+    </head>
+    
+    <body ononline="update(true)"
+       onoffline="update(false)"
+       onload="update(navigator.onLine)">
+      <!-- source of above: http://www.w3.org/TR/html5/sections.html -->
+      <p>You are: <span id="status">(Unknown)</span></p>
       
-      function initialize() {
-        displayCoords=document.getElementById("msg");
-        myAddress = document.getElementById("address");
+    <main>
+        <header>
+          <H1>Under Construction: Autopopulate Form with LatLon</H1>
+        </header>
         
-        geocoder = new google.maps.Geocoder();
-        var latlng = new google.maps.LatLng(34.0144, -6.83);
-        var mapOptions = {
-          zoom: 8,
-          center: latlng,
-          mapTypeId: 'roadmap'
-        }
-        map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions); 
-      }
- 
-    function showOnGoogleMap(latlng) {
- 
-        geocoder.geocode({'latLng': latlng}, function(results, status) {
-          if (status == google.maps.GeocoderStatus.OK) {
-            if (results[1]) {
-              map.setZoom(11);
-              marker = new google.maps.Marker({
-                  position: latlng,
-                  map: map
-              });
-              infowindow.setContent(results[1].formatted_address);
-              infowindow.open(map, marker);
-              
-              // Display address as text in the page
-              myAddress.innerHTML="Adress: " + results[0].formatted_address;
-              
-              // Call the function that parses the results and fills
-              // the input fields
-              parseResult(results[0].address_components);
-            } else {
-              alert('No results found');
-            }
-          } else {
-            alert('Geocoder failed due to: ' + status); 
-          }
-        });
-    }     
+      <nav>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="http://red-hound.github.io">Home</a></li>
+          <li><a href="http://red-hound.github.io/EDX/index.html">Forms</a></li>
+        </ul>
+      </nav>
+        <div style="background:url('https://cloud.githubusercontent.com/assets/10208580/8580190/25e62e8c-2587-11e5-8262-cf8933518761.jpg') no-repeat center center;height:500px;background-size:cover;"></div>
+        <h6>Background image by  Ryan McGuire <a href="http://gratisography.com/">Gratisography</a></h6>
+    
+        <article>
+          <h2>Projects from EDX Courses</h2>
+          <section>
+            <header><h3>Google Maps JavaScript API</h3></header>
+          <h4><a href="https://developers.google.com/maps/documentation/javascript/geocoding">GeoCoding</a></h4>
+          <h5>Idea for this form is based on the recommendation of a student with disabilities.  He thinks that an ability to text out location in event of emergencies would enable rescue groups to find him.</h5>
+          </section>
+        </article>
+    </main>
+    
+    <footer  id="references">
+    <h4>References for Appcache</h4>
+    <ul>
+      <li><a href="http://diveintohtml5.info/offline.html">Cache Manifest</a></li>
+      <li><a href="http://westciv.com/tools/manifestR/">Make a Manifest Tool</a></li>
+      <li><a href="http://appcache.offline.technology/">Appcache Online</a></li>
       
-      var country, postalCode, state, route, streetNumber, locality, areaLvl1, areaLvl2;
-      
-      function parseResult(result) {
-        for(i in result){
-          // Let's print all the data we can collect from the reverse geocoder,
-          // Look at the debug console to see what we get...
-          console.log("type = " + result[i].types[0] + " long_name = " + 
-                       result[i].long_name);
-
-          if(result[i].types[0] == 'postal_code')
-            postalCode = result[i].long_name;
-          if(result[i].types[0] == 'country')
-            country= result[i].long_name;
-          if(result[i].types[0] == 'street_number')
-           
-            streetNumber= result[i].long_name;
-          if(result[i].types[0] == 'route')
-            route= result[i].long_name;
-           if(result[i].types[0] == 'locality')
-            locality= result[i].long_name;
-          if(result[i].types[0] == 'state')
-            state= result[i].long_name;
-          if(result[i].types[0] == 'administrative_area_level_2')
-            arealLvl2= result[i].long_name;
-          if(result[i].types[0] == 'administrative_area_level_1')
-            areaLvl1= result[i].long_name;
-        }
-        // MICHEL BUFFA : added this for debugging in the console
-        console.log("postalCode = " + postalCode);
-        console.log("country = " + country);
-        console.log("streetNumber = " + streetNumber);
-        console.log("route = " + route);
-        console.log("locality = " + locality);
-        console.log("Administrative area level 1 " + areaLvl1);
-        console.log("Administrative area level 2 " + areaLvl2);
+    </ul>
+    </footer>
+<script src="scripts/monitor.js"></script>
+<script src="scripts/status.js"></script>
+<script src="scripts/edx-coords1.js"></script>
+ </body>
+ </html>
         
-        // fill input fields now, check if variables are undefined
-        if((route != undefined) && (streetNumber != undefined)) {
-          console.log("let's fill the street");
-          document.querySelector("#address1").value = streetNumber + " " + route;
-        }
-         if(locality != undefined) {
-          console.log("let's fill the city");
-          document.querySelector("#address2").value =  locality;
-        }
-        if(country != undefined) {
-          console.log("let's fill the country");
-          document.querySelector("#country").value =  country;
-        } 
-        if(postalCode != undefined) {
-          console.log("let's fill the postalCode");
-          document.querySelector("#postcode").value =  postalCode;
-        } 
-        if(areaLvl1 != undefined) {
-          console.log("let's fill the State/Region");
-          document.querySelector("#address3").value =  areaLvl1;
-        } 
-      }
-    </script>
-</head>
-<body onload="initialize()">
-<main>
-	<article>
-		<h2>Build an autofill for Lat Long</h2>
-		 <section>
- 	<headeR><h4>My Attempt</h4></header>
- <script>
-     var latitude, longitude;
-       function getLocation2() {
-          if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-          } else {
-          displayCoords.innerHTML="Geolocation API not supported by your browser.";
-       }
-     }
-      
-      function parseResult2(result2) {
-      
-        for(i in result2){
-          // Let's print all the data we can collect from the reverse geocoder,
-          // Look at the debug console to see what we get...
-          console.log("type = " + result[i].types[0] + " long_name = " + 
-                       result2[i].long_name);
-                       
-            if(result2[i].types[0] == 'latitude')
-            latitude = result[i].long_name;
-            if(result2[i].types[0] == 'longitude')
-            longitude= result[i].long_name;
-              }
-              
-                // Follow MICHEL BUFFA lead : added this for debugging in the console
-        console.log("latitude = " + latitude);
-        console.log("longitude = " + longitude);
- </script>
- 
-  	<form>
-  
-	<fieldset>
-  	<legend>Locate me with Lat Long</legend>
-	<p id="msg2">Click the button to get your coordinates:</p>
-    	<p id="address2too"></p>
- 
-    	<button type="button" onclick="getLocation2()">Where am I 2?</button>
-      	<div id="map_canvas2" style="width: 500px; height: 300px"></div>
-	</fieldset>
- 	</form>
- 
- 
- </section>
-		
-		
-		
-		
-		
-	<section>
-  		<header><h4>Example of the use of Google reverse geocoder + try to fill some address input fields. Original code by John Hollamby.</h4></header>
- 	<form>
-  
-	<fieldset>
-  <legend>Locate me</legend>
-<p id="msg">Click the button to get your coordinates:</p>
-    <p id="address"></p>
- 
-    <button type="button" onclick="getLocation()">Where am I ?</button>
-      <div id="map_canvas" style="width: 500px; height: 300px"></div>
-</fieldset>
-   <fieldset>
-   <legend>Address</legend>
-   <ol>		   			
-    <li>
-     <label for="address1">Street Address *</label>
-     <input id="address1" name="street_address" type="text" required />
-    </li>
-	<li>
-      <label for="address2">Suburb *</label>
-     <input id="address2" name="suburb" type="text" required />
-    </li>
-	<li>
-      <label for="address3">State *</label>
-     <input id="address3" name="state" type="text" required />
-    </li>		   
-    <li>
-     <label for="postcode">Postcode *</label>
-     <input id="postcode" name="postcode" type="number" min="1001" max="999999" required />
-     <p class="validation01">
-      <span class="invalid">Your postcode is out of range between 1001 - 999999</span>
-       <span class="valid">Your postcode is in the correct range</span>
-     </p> 
-    </li>
-    <li>
-     <label for="country">Country *</label>
-     <input id="country" name="country" type="text" required />
-    </li>
-   </ol>
-  </fieldset>
-
- </form>
- </section>
-
- </article>
- </main>
-</body>
-</html>
-  
