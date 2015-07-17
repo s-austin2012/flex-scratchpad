@@ -1,0 +1,52 @@
+main, body {
+  font-family:Arial;
+  color:#993300;
+}
+        
+ /* below section on skip for screen readers and visually impaired is from http://webaim.org/techniques/css/invisiblecontent/ */        
+#skip a {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+#skip a:focus {
+position:static;
+width:auto;
+height:auto;
+} 
+ /* end WEBAIM skip to content styling */
+ /* beginning of online or offline status indicators */
+ #status {
+      color: #FFFFFF;
+      padding: 5px;
+   
+ }
+ .online {    
+          background: green;
+        }
+.offline {
+          background:  red;  
+        }
+
+/*end online offline status indicator styling */ 
+  
+button {
+  background:#ffffff;
+}
+
+/* myForm from EDX example on forms */
+ .myForm input:invalid { background-color: lightPink;}
+  .myForm input:valid { background-color:lightGreen; }
+ .myForm input:required {border: 2px solid red;}
+ .myForm input:optional {border: 2px solid green;}
+  .myForm label { display: inline-block; width: 140px; text-align: right; } 
+/* end EDX example on myForm */
+
+/*home page featuring image with prominent red components*/
+h1{
+color:#ff0000;
+}
