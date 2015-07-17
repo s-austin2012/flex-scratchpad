@@ -104,6 +104,7 @@
  section {
    margin-left:1em;
  }
+ /* need to check if header css are preventing child elements from css implementation */
  h1 {
    margin-left:2em;
  }  
