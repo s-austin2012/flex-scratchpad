@@ -95,6 +95,13 @@
  }
  nav li {
    display:inline-block;
-   padding:5px;
+   padding-left:5px;
+   padding-right:5px;
+ }
+ article {
+   margin-left:2em;
+ }
+ section {
+   margin-left:1em;
  }
  
