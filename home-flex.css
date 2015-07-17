@@ -90,9 +90,7 @@
    }
   }  
  /*customizations below here */
- nav {
-   display:inline;
-   background:#ff000; 
-   color:#ffffff;
+ nav li {
+   display:inline-block;
  }
  
