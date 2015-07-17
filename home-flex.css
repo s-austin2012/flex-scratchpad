@@ -91,7 +91,8 @@
   }  
  /*customizations below here */
  nav {
-   display:inline-block;
-   color:green;
+   display:inline;
+   background:#ff000;
+   color:#ffffff;
  }
  
