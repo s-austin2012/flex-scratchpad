@@ -141,6 +141,29 @@
           if(result[i].types[0] == 'administrative_area_level_1')
             areaLvl1= result[i].long_name;
         }
+        // fill input fields now, check if variables are undefined
+        if((route != undefined) && (streetNumber != undefined)) {
+          console.log("let's fill the street");
+          document.querySelector("#address1").value = streetNumber + " " + route;
+        }
+         if(locality != undefined) {
+          console.log("let's fill the city");
+          document.querySelector("#address2").value =  locality;
+        }
+        if(country != undefined) {
+          console.log("let's fill the country");
+          document.querySelector("#country").value =  country;
+        } 
+        if(postalCode != undefined) {
+          console.log("let's fill the postalCode");
+          document.querySelector("#postcode").value =  postalCode;
+        } 
+        if(areaLvl1 != undefined) {
+          console.log("let's fill the State/Region");
+          document.querySelector("#address3").value =  areaLvl1;
+        } 
+      }
+        
         </script>
         <h4>Example of the use of Google reverse geocoder in EDX Course. Original code by John Hollamby.</h4>
  <form>
