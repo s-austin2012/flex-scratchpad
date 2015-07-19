@@ -141,6 +141,49 @@
             areaLvl1= result[i].long_name;
         }
         </script>
+        <h4>Example of the use of Google reverse geocoder in EDX Course. Original code by John Hollamby.</h4>
+ <form>
+  
+<fieldset>
+  <legend>Locate me</legend>
+<p id="msg">Click the button to get your coordinates:</p>
+    <p id="address"></p>
+ 
+    <button type="button" onclick="getLocation()">Where am I ?</button>
+      <div id="map_canvas" style="width: 500px; height: 300px"></div>
+</fieldset>
+   <fieldset>
+   <legend>Address</legend>
+   <ol>		   			
+    <li>
+     <label for="address1">Street Address *</label>
+     <input id="address1" name="street_address" type="text" required />
+    </li>
+	<li>
+      <label for="address2">Suburb *</label>
+     <input id="address2" name="suburb" type="text" required />
+    </li>
+	<li>
+      <label for="address3">State *</label>
+     <input id="address3" name="state" type="text" required />
+    </li>		   
+    <li>
+     <label for="postcode">Postcode *</label>
+     <input id="postcode" name="postcode" type="number" min="1001" max="999999" required />
+     <p class="validation01">
+      <span class="invalid">Your postcode is out of range between 1001 - 999999</span>
+       <span class="valid">Your postcode is in the correct range</span>
+     </p> 
+    </li>
+    <li>
+     <label for="country">Country *</label>
+     <input id="country" name="country" type="text" required />
+    </li>
+   </ol>
+  </fieldset>
+
+ </form>
+        
           </section>
         </article>
     </main>
