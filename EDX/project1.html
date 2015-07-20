@@ -59,7 +59,12 @@
         displayCoords.innerHTML="Latitude: " + position.coords.latitude + 
             "<br />Longitude: " + position.coords.longitude;    
         showOnGoogleMap(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
- 
+      //start add  here
+      //based on https://jsfiddle.net/karrie/28mLgd9j/
+       document.getElementById('field_latitude').value = position.coords.latitude;
+       document.getElementById('field_longitude').value = position.coords.longitude;
+      
+     //end add here
     }
  
       var geocoder;
@@ -136,6 +141,15 @@
           if(result[i].types[0] == 'administrative_area_level_1')
             areaLvl1= result[i].long_name;
         }
+        // MICHEL BUFFA : added this for debugging in the console
+        console.log("postalCode = " + postalCode);
+        console.log("country = " + country);
+        console.log("streetNumber = " + streetNumber);
+        console.log("route = " + route);
+        console.log("locality = " + locality);
+        console.log("Administrative area level 1 " + areaLvl1);
+        console.log("Administrative area level 2 " + areaLvl2);
+        
         // fill input fields now, check if variables are undefined
         if((route != undefined) && (streetNumber != undefined)) {
           console.log("let's fill the street");
@@ -158,8 +172,7 @@
           document.querySelector("#address3").value =  areaLvl1;
         } 
       }
-        
-        </script>
+    </script>
         <h4>Example of the use of Google reverse geocoder in EDX Course. Original code by John Hollamby.</h4>
  <form>
   
