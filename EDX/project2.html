@@ -1,5 +1,6 @@
 <!DOCTYPE html>   
-  <html manifest="manifest.appcache" data-revision="1.0" lang="en">
+  <html lang="en">
+   <!-- also removed from html references to  manifest="manifest.appcache" data-revision="1.0" -->
     <head>
       <meta charset="utf-8">  
       <title>HTML5 | EDX Project Autopopulate Form</title>
@@ -10,12 +11,14 @@
       <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
     </head>
     <body onload="initialize()">
+    	
+
     
     <!-- <body ononline="update(true)"
        onoffline="update(false)"
        onload="update(navigator.onLine);initialize()"> -->
       <!-- source of above: http://www.w3.org/TR/html5/sections.html -->
-      <p style="margin-left:15px;">You are: <span id="status">(Unknown)</span></p>
+      <!-- <p style="margin-left:15px;">You are: <span id="status">(Unknown)</span></p> -->
       
     <main>
         <header>
