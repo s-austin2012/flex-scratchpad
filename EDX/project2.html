@@ -47,6 +47,8 @@
             <header><h4>Google Maps JavaScript API</h4></header>
             <h4><a href="https://developers.google.com/maps/documentation/javascript/geocoding">GeoCoding</a></h4>
             <!--MB code for reverse geolocation-->
+
+    <!--MB code for reverse geolocation-->
     <script>
        var displayCoords, myAddress; 
   
@@ -64,12 +66,10 @@
         displayCoords.innerHTML="Latitude: " + position.coords.latitude + 
             "<br />Longitude: " + position.coords.longitude;    
         showOnGoogleMap(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
-      //start add  here
-      //based on https://jsfiddle.net/karrie/28mLgd9j/
+      
        document.getElementById('field_latitude').value = position.coords.latitude;
        document.getElementById('field_longitude').value = position.coords.longitude;
-      
-     //end add here
+ 
     }
  
       var geocoder;
@@ -176,6 +176,15 @@
           console.log("let's fill the State/Region");
           document.querySelector("#address3").value =  areaLvl1;
         } 
+          if(field_latitude != undefined) {
+          console.log("let's fill the Latitude");
+          document.querySelector("#field_latitude").value =  position.coords.latitude;
+        } 
+          if(field_longitude != undefined) {
+          console.log("let's fill the Longitude");
+          document.querySelector("#field_longitude").value =  position.coords.longitude;
+        } 
+        
       }
     </script>
      <h4>Example of the use of Google reverse geocoder in EDX Course. Original code by John Hollamby.</h4>
