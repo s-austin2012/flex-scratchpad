@@ -50,3 +50,49 @@ button {
 h1{
 color:#ff0000;
 }
+/* Added 23 July 2015 from reddhound flex.css, also added flexblack as a class */
+   .flex
+   {
+      /* basic styling */
+      /*width: 350px;*/
+      width:auto;
+      height: 100px;
+      /*border: 1px solid #555;*/
+       border: 1px solid #eebb55;
+       border-radius: 7pt;
+        margin: 4px;
+        padding: 5px;
+      /* font: 14px Arial;*/ 
+
+      /* flexbox setup */
+      display: -webkit-flex;
+      -webkit-flex-direction: row;
+
+      display: flex;
+      flex-direction: row;
+   }
+   
+    .flex > div
+   {
+      -webkit-flex: 1 1 auto;
+      flex: 1 1 auto;
+      text-indent:10px;
+
+      width: 30px; /* To make the transition work nicely.  (Transitions to/from
+                      "width:auto" are buggy in Gecko and Webkit, at least.
+                      See http://bugzil.la/731886 for more info.) */
+
+      -webkit-transition: width 0.7s ease-out;
+      transition: width 0.7s ease-out;
+   }
+
+   /* colors */
+   .flex > div:nth-child(1){ background : #ffffff; }
+   .flex > div:nth-child(2){ background : #F1F2F1; }
+   .flex > div:nth-child(3){ background : #ffffff; }
+
+   .flex > div:hover
+   {
+        width: 200px;
+   }
+  
