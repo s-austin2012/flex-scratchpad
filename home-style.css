@@ -30,7 +30,7 @@ height:auto;
 /*end online offline status indicator styling */ 
 /*Source https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes */
   body {
-   font: 24px Arial, Helvetica;
+   font: 16px Arial, Helvetica;
    /* background: #999999;*/
    background:#ffffff;
    color: #330000;
@@ -92,7 +92,8 @@ height:auto;
    border: 1px solid #eebb55;
    border-radius: 7pt;
    /*background: #ffeebb;*/
-   background: #ffffff;
+   background: #000000;
+   color: #eebb55;
    }
  
   /* Too narrow to support three columns */
