@@ -1,9 +1,39 @@
+ /* below section on skip for screen readers and visually impaired is from http://webaim.org/techniques/css/invisiblecontent/ */        
+#skip a {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+#skip a:focus {
+position:static;
+width:auto;
+height:auto;
+} 
+ /* end WEBAIM skip to content styling */
+ /* beginning of online or offline status indicators */
+ #status {
+      color: #FFFFFF;
+      padding: 5px;
+   
+ }
+ .online {    
+          background: green;
+        }
+.offline {
+          background:  red;  
+        }
+
+/*end online offline status indicator styling */ 
 /*Source https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes */
   body {
    font: 24px Arial, Helvetica;
    /* background: #999999;*/
    background:#ffffff;
-   color: #333366;
+   color: #330000;
   }
 
   #main {
