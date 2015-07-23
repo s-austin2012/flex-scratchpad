@@ -1,96 +1,46 @@
-<!DOCTYPE html>
+<!DOCTYPE html>   
   <html manifest="manifest.appcache" data-revision="1.0" lang="en">
     <head>
       <meta charset="utf-8">
       <title>HTML5 | Test Site</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="flex.css">
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="normalize.css">
+      <link rel="stylesheet" href="home-flex.css">
+      <link rel="stylesheet" href="home-normalize.css">
+      <link rel="stylesheet" href="home-style.css">
     </head>
+    
     <body ononline="update(true)"
        onoffline="update(false)"
        onload="update(navigator.onLine)">
       <!-- source of above: http://www.w3.org/TR/html5/sections.html -->
       <p>You are: <span id="status">(Unknown)</span></p>
-    <header>
-    <h1>
-      <a href="http://red-hound.github.io/">HTML5 Test Site</a>
-    </h1>
-    <nav id="skip">
       
-      <h4><a href="#main">Skip to Main Content</a></h4>
-      </nav> 
-     </header>
-
- 
-
-  <main id="main">
-      
-  <article><h2>A Test Page for a Friend</h2>
-    <section>
-      <header><h3>Section One: Why</h3></header>
-      <h4>A friend with multiple disabilities had the idea that in event of a fire, that he should be able to use his phone to send out his location to rescue agencies.  I agree.  Hopefully, with the lessons learned from the EDX class, we can do just that.</h4>
-      </section>
-    <section>
-      <header><h3>Section Two: Using the GeolocationAPI</h3></header>
-      <!-- uses code from EDX lesson on getting coordinates -->
-      <h4 id="msg">Click the button to get your coordinates:</h4>
-      <label for="geolocation">
-        <button onclick="getLocation()" name="geolocation" id="geolocation">Where am I ?</button></label>
-      </section>
-    <section>
-      <header><h3>Section Three: Autopopulate a form?</h3></header>
-          <h4>Modified EDX Example Validation API</h4>
-          <h4>Here, we remove validation requirements so that those with disabilities can send the form in a hurry.</h4>
-          <h4>If no validate was added to the form class, the colored background is removed</h4>
-          <h4>"Required" was removed</h4>
-
-<form class="myForm">
-  <fieldset>
-    <legend>Modified EDX Example use of the validation API</legend>
- <label for="latitude" >latitude:</label> <input type="text" id="latitude" oninput="populateLatitude()">
- <p>
- <label for="longitude">longitude:</label> <input type="text" id="longitude" oninput="populateLongitude()">
- <p>
-   <button>Submit</button>
-  </fieldset>
-</form>
-
-<script> 
- function populateCoords() {
- var latitude = document.getElementById('latitude');
- var longitude = document.getElementById('longitude');
- if (password1.value != password2.value) {
- password2.setCustomValidity('Passwords non identiques');
- } else {
- password2.setCustomValidity('');
- }
- }
-</script>
-<h4>Below, just working out some ideas.  Storing latitude and longitude as local storage variables.</h4>
-<script>
-  var lslatitude = localStorage.latitude;
-  var lslongitude = localStorage.longitude;
-</script>
-<h4>Yet more to keep in mind: oninput</h4>
-<script>
-oninput="localStorage.lslatitude=this.value;"
- </script>
-      </section>
-  </article>
-      <nav id="sitenav">      
-      <h4>Site Nav</h4>
-      <ul>
-        <li><a href="#main">Main</a></li>
-        <li><a href="#references">References</a></li>
-      </ul>
-    </nav>
-  <aside>
-    <h4>Aside</h4>
-    </aside>
-  </main>
-  <footer  id="references">
+    <main>
+        <header>
+          <H1>Under Construction: HTML5 Test Site</H1>
+        </header>
+        
+      <nav>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="http://red-hound.github.io">Home</a></li>
+          <li><a href="http://red-hound.github.io/EDX/index.html">EDX ProjectsForms</a></li>
+        </ul>
+      </nav>
+        <div style="background:url('https://cloud.githubusercontent.com/assets/10208580/8850688/145538ba-3118-11e5-8c22-29a5dae3690a.jpg') no-repeat center center;height:500px;background-size:cover;"></div>
+        <h6>Background image by  Ryan McGuire <a href="http://gratisography.com/">Gratisography</a></h6>
+    
+        <article>
+          <h2>Projects from EDX Courses</h2>
+          <section>
+            <header><h3>Forms</h3></header>
+          <h4><a href="http://red-hound.github.io/EDX/index.html">Form for automatic population of geolocation data</a></h4>
+          <h5>Idea for this form is based on the recommendation of a student with disabilities.  He thinks that an ability to text out location in event of emergencies would enable rescue groups to find him.</h5>
+          </section>
+        </article>
+    </main>
+    
+    <footer  id="references">
     <h4>References</h4>
     <ul>
       <li><a href="http://diveintohtml5.info/offline.html">Cache Manifest</a></li>
@@ -98,12 +48,9 @@ oninput="localStorage.lslatitude=this.value;"
       <li><a href="http://appcache.offline.technology/">Appcache Online</a></li>
       
     </ul>
-  </footer>
+    </footer>
 <script src="scripts/monitor.js"></script>
 <script src="scripts/status.js"></script>
 <script src="scripts/edx-coords1.js"></script>
-</body>
-</html>
-       
-        
-    
+ </body>
+ </html>
