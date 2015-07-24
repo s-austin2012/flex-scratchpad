@@ -124,8 +124,9 @@
   line-height: 150px;
   color: white;
   font-weight: bold;
-  font-size: 3em;
+  font-size: 1em;
   text-align: center;
+  overflow: hidden;
 } 
 
 /* add blue color to above 00ccff */
