@@ -4,9 +4,7 @@
       <meta charset="utf-8">
       <title>HTML5 | Test Site</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="home-flex.css">
-      <link rel="stylesheet" href="home-normalize.css">
-      <link rel="stylesheet" href="home-style.css">
+      <link rel="stylesheet" href="flex2.css">
     </head>
     
     <body ononline="update(true)"
@@ -14,8 +12,8 @@
        onload="update(navigator.onLine)">
       <!-- source of above: http://www.w3.org/TR/html5/sections.html -->
       <p>You are: <span id="status">(Unknown)</span></p>
-      
-    <main>
+      <div id="skip"><a href="#content">Skip to Main Content</a></div>
+   
         <header>
           <H1>Under Construction: HTML5 Test Site</H1>
         </header>
@@ -29,25 +27,37 @@
       </nav>
         <div style="background:url('https://cloud.githubusercontent.com/assets/10208580/8850688/145538ba-3118-11e5-8c22-29a5dae3690a.jpg') no-repeat center center;height:500px;background-size:cover;"></div>
         <h6>Background image by  Ryan McGuire <a href="http://gratisography.com/">Gratisography</a></h6>
-    
+    <main id="content">  
         <article>
-          <h2>Projects from EDX Courses</h2>
-          <section>
-            <header><h3>Forms</h3></header>
-          <h4><a href="http://red-hound.github.io/EDX/index.html">Form for automatic population of geolocation data</a></h4>
-          <h5>Idea for this form is based on the recommendation of a student with disabilities.  He thinks that an ability to text out location in event of emergencies would enable rescue groups to find him.</h5>
-          </section>
+          <h2>Exploring HTML5</h2>
+<section>
+   <h5>Links to information and tests</h5>
+   <ul class="flex flex-container">
+      <li class="flex-item"><a href="https://gitter.im/w3c/a11ySlackers">Login to Gitter a11y Slackers</a></li>
+      <li class="flex-item"><a href="https://github.com/w3c/a11ySlackers#user-content-pidgin">Join a11y Slacker</a></li>
+      <li class="flex-item"><a href="http://www.paciellogroup.com/blog/2015/07/anybody-can-be-an-a11y-slacker/#sameroom">Article...Anybody can be an A11y Slacker</a></li>
+      <li class="flex-item"><a href="flexboxtests1.html">Flexbox Test One</a></li>
+      <li class="flex-item"><a href="http://bennettfeely.com/flexplorer/">http://bennettfeely.com/flexplorer/</a></li>
+   </ul>
+</section>
         </article>
     </main>
     
-    <footer  id="references">
+    <footer  id="references" class="flexblack">
     <h4>References</h4>
+     <div>
     <ul>
       <li><a href="http://diveintohtml5.info/offline.html">Cache Manifest</a></li>
       <li><a href="http://westciv.com/tools/manifestR/">Make a Manifest Tool</a></li>
       <li><a href="http://appcache.offline.technology/">Appcache Online</a></li>
-      
     </ul>
+     </div>
+     <div>
+       <ul>
+          <li><a href="https://platform.html5.org/">HTML5 Web Platform</a></li>
+
+       </ul>
+     </div>
     </footer>
 <script src="scripts/monitor.js"></script>
 <script src="scripts/status.js"></script>
