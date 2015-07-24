@@ -1,3 +1,17 @@
+ /* beginning of online or offline status indicators */
+ #status {
+      color: #FFFFFF;
+      padding: 5px;
+   
+ }
+ .online {    
+          background: green;
+        }
+.offline {
+          background:  red;  
+        }
+
+/*end online offline status indicator styling */ 
 /*Source https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes */
   body {
    font: 16px Arial, Helvetica;
