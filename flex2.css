@@ -97,9 +97,6 @@
     min-height: 50px;
     max-height: 50px;
    }
-   .flex-item {
-    color:black;
-   }
   }
   
   /*above bracket closes minimized window at 640 px */
@@ -115,7 +112,7 @@
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   /*add flex-wrap: wrap; this seems to solve the wrap-around problem for CSS tricks example*/
   flex-wrap: wrap;
 }
