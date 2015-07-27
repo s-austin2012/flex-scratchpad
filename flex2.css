@@ -317,7 +317,54 @@ height:auto;
    content:  "\2713 ";
 }
 
-/* end test content before and after */                
-  
+/* end test content before and after */  
+/*below modified flex from flexbox fluid grid http://codepen.io/jacmaes/pen/ofKtH */
+
+@media only screen and (min-width:30em) {
+  ul:before {
+  content:"Two columns - min-width: 30em";
+    }
+  li {
+    width:48%; /* Two columns : 48+48=96 + 4 margins of 1%= 4%  */
+  }
+}
+
+@media only screen and (min-width:40em) {
+  ul:before {
+  content:"Three columns - min-width: 40em";
+    }
+  li {
+    width:31%;
+  }
+}
+
+@media only screen and (min-width:50em) {
+  ul:before {
+  content:"Four columns - min-width: 50em";
+    }
+  li {
+    width:23%;
+  }
+}
+
+@media only screen and (min-width:65em) {
+  ul:before {
+  content:"Five columns - min-width: 65em";
+    }
+  li {
+    width:18%;
+  }
+}
+
+@media only screen and (min-width:80em) {
+  ul:before {
+  content:"Six columns - min-width: 80em";
+    }
+  li {
+    width:14%;
+  }
+}
+
+/*end http://codepen.io/jacmaes/pen/ofKtH */  
      
       
