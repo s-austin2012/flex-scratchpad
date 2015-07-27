@@ -115,6 +115,7 @@
   justify-content: flex-start;
   /*add flex-wrap: wrap; this seems to solve the wrap-around problem for CSS tricks example*/
   flex-wrap: wrap;
+  flex-grow: 1;
 }
 
 .flex-item {
