@@ -68,8 +68,8 @@
  /*removed header from the styling below which included both header and footer */
   footer {
    display: block;
-   /* margin: 4px; */
-   /* padding: 5px; */
+   margin: 4px;
+   padding: 5px;
    min-height: 100px;
    /* take away the min-height and the text overruns */
    /*border: 1px solid #eebb55;*/
