@@ -202,6 +202,46 @@
   text-decoration:none;
 } 
 
+.flex-item-black {
+  background: #000000;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  overflow: hidden;
+} 
+.flex-item-black a, a:active {
+  background: #000000;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+
+.flex-item-black a:hover, a:focus {
+  background: #ff0000;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
 
 /*above is end of code modified and adapted from CSS tricks */
 /* below from http://webaim.org/techniques/css/invisiblecontent/ */      
@@ -228,7 +268,7 @@ height:auto;
     content: "To Do ";
 }
 
-.flex-item-blue a:visited:before {
+.flex-item-black a:visited:before {
    content:  "\2713 ";
 }
 
