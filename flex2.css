@@ -104,8 +104,8 @@
   width: 200px;
   height: 50px;
   margin-top: 10px;
-  line-height: 150px;
-  color: white;
+  line-height: 50px;
+  color: black;
   font-weight: bold;
   font-size: 1em;
   text-align: center;
@@ -336,5 +336,5 @@ height:auto;
 
 /* end test content before and after */  
 
-     
+       
            
