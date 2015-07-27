@@ -202,6 +202,48 @@
   text-decoration:none;
 } 
 
+.flex-item-brick {
+  background: #000000;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  overflow: hidden;
+} 
+.flex-item-brick a, a:active {
+  background: #000000;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+
+.flex-item-brick a:hover, a:focus {
+  background: #993333;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+
+/*brick color 993333 */
 
 /*above is end of code modified and adapted from CSS tricks */
 /* below from http://webaim.org/techniques/css/invisiblecontent/ */      
@@ -222,4 +264,18 @@ width:auto;
 height:auto;
 }     
    
-              
+/* below to test content before and after */
+/* also see reference https://css-tricks.com/css-content/ */
+.flex-item::before { 
+    content: "To Do: ";
+}
+.flex-item-brick::before { 
+    content: "Link: ";
+}
+
+.flex-item-brick a:visited:before {
+   content:  "\2713 ";
+}
+
+/* end test content before and after */                
+  
