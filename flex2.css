@@ -222,4 +222,14 @@ width:auto;
 height:auto;
 }     
    
-              
+/* below to test content before and after */
+/* also see reference https://css-tricks.com/css-content/ */
+.flex-item::before { 
+    content: "To Do ";
+}
+
+.flex-item-blue a:visited:before {
+   content:  "\2713 ";
+}
+
+/* end test content before and after */                
