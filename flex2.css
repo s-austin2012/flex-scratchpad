@@ -131,7 +131,6 @@
   text-align: center;
   overflow: hidden;
   flex-grow: 1;
-  border-radius: 7pt;
 } 
 
 /* add blue color to above 00ccff */
@@ -148,7 +147,6 @@
   font-size: 1em;
   text-align: center;
   overflow: hidden;
-  border-radius: 7pt;
   flex-grow: 1;
 } 
 
@@ -221,7 +219,6 @@
   font-size: 1em;
   text-align: center;
   overflow: hidden;
-  border-radius: 7pt;
   flex-grow: 1;
 } 
 .flex-item-brick a, a:active {
@@ -264,7 +261,6 @@
   font-size: 1em;
   text-align: center;
   overflow: hidden;
-  border-radius: 7pt;
   flex-grow: 1;
 } 
 .flex-item-black a, a:active {
