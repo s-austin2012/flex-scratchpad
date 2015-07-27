@@ -203,7 +203,7 @@
 } 
 
 .flex-item-brick {
-  background: #000000;
+  background: #993333;
   padding: 5px;
   width: 200px;
   height: 150px;
@@ -230,7 +230,7 @@
 } 
 
 .flex-item-brick a:hover, a:focus {
-  background: #993333;
+  background: #000000;
   padding: 5px;
   width: 200px;
   height: 150px;
