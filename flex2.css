@@ -97,8 +97,25 @@
     min-height: 50px;
     max-height: 50px;
    }
+   /*added a flex item to see if we can narrow the height in columns */
+   .flex-item {
+  background: tomato;
+  padding: 5px;
+  width: 200px;
+  height: 50px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  overflow: hidden;
+} 
+   
+   /*end added flex item to see if we can narrow the height in columns */
   }
   
+  /*above bracket closes minimized window at 640 px */
  
  /* Below adapted from CSS Tricks  https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 .flex-container {
