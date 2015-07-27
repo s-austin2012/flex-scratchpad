@@ -132,6 +132,7 @@
   text-align: center;
   overflow: hidden;
   flex-grow: 1;
+  order: 1;
 } 
 
 /* add blue color to above 00ccff */
@@ -150,6 +151,7 @@
   text-align: center;
   overflow: hidden;
   flex-grow: 1;
+  order: 4;
 } 
 
 .flex-item a, a:active {
@@ -223,6 +225,7 @@
   text-align: center;
   overflow: hidden;
   flex-grow: 1;
+  order: 2;
 } 
 .flex-item-brick a, a:active {
   background: #993333;
@@ -266,6 +269,7 @@
   text-align: center;
   overflow: hidden;
   flex-grow: 1;
+  order: 3;
 } 
 .flex-item-black a, a:active {
   background: #000000;
