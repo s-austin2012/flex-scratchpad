@@ -99,6 +99,7 @@
    }
   }
   
+  /*above bracket closes minimized window at 640 px */
  
  /* Below adapted from CSS Tricks  https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 .flex-container {
@@ -111,13 +112,15 @@
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   /*add flex-wrap: wrap; this seems to solve the wrap-around problem for CSS tricks example*/
   flex-wrap: wrap;
+  flex-grow: 1;
 }
 
 .flex-item {
   background: tomato;
+  border-left:15px solid #993333;
   padding: 5px;
   width: 200px;
   height: 150px;
@@ -128,12 +131,15 @@
   font-size: 1em;
   text-align: center;
   overflow: hidden;
+  flex-grow: 1;
+  order: 1;
 } 
 
 /* add blue color to above 00ccff */
 
 .flex-item-blue {
   background: #333366;
+  border-left:15px solid #000000;
   padding: 5px;
   width: 200px;
   height: 150px;
@@ -144,6 +150,8 @@
   font-size: 1em;
   text-align: center;
   overflow: hidden;
+  flex-grow: 1;
+  order: 4;
 } 
 
 .flex-item a, a:active {
@@ -205,6 +213,7 @@
 
 .flex-item-brick {
   background: #993333;
+  border-left:15px solid #000000;
   padding: 5px;
   width: 200px;
   height: 150px;
@@ -215,6 +224,8 @@
   font-size: 1em;
   text-align: center;
   overflow: hidden;
+  flex-grow: 1;
+  order: 2;
 } 
 .flex-item-brick a, a:active {
   background: #993333;
@@ -246,6 +257,7 @@
 
 .flex-item-black {
   background: #000000;
+  border-left:15px solid #ff0000;
   padding: 5px;
   width: 200px;
   height: 150px;
@@ -256,6 +268,8 @@
   font-size: 1em;
   text-align: center;
   overflow: hidden;
+  flex-grow: 1;
+  order: 3;
 } 
 .flex-item-black a, a:active {
   background: #000000;
@@ -317,7 +331,7 @@ height:auto;
    content:  "\2713 ";
 }
 
-/* end test content before and after */                
-  
+/* end test content before and after */  
      
-      
+               
+                 
