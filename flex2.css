@@ -261,6 +261,7 @@
   font-size: 1em;
   text-align: center;
   overflow: hidden;
+  flex-grow: 1;
 } 
 .flex-item-black a, a:active {
   background: #000000;
