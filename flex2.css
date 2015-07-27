@@ -120,7 +120,7 @@
 
 .flex-item {
   background: tomato;
-  border-left:10px solid #000000;
+  border-left:15px solid #993333;
   padding: 5px;
   width: 200px;
   height: 150px;
@@ -139,7 +139,7 @@
 
 .flex-item-blue {
   background: #333366;
-   border-left:10px solid #000000;
+  border-left:15px solid #000000;
   padding: 5px;
   width: 200px;
   height: 150px;
@@ -213,7 +213,7 @@
 
 .flex-item-brick {
   background: #993333;
-   border-left:10px solid #000000;
+  border-left:15px solid #000000;
   padding: 5px;
   width: 200px;
   height: 150px;
@@ -257,7 +257,7 @@
 
 .flex-item-black {
   background: #000000;
-   border-left:10px solid #ff0000;
+  border-left:15px solid #ff0000;
   padding: 5px;
   width: 200px;
   height: 150px;
