@@ -227,6 +227,55 @@
   flex-grow: 1;
   /*order: 2;*/
 } 
+/*brown 67300c */
+
+.flex-item-brown {
+  background: #67300c;
+  border-left:15px solid #000000;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  overflow: hidden;
+  flex-grow: 1;
+  /*order: 2;*/
+} 
+
+.flex-item-brown a, a:active {
+  background: #67300c;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+
+.flex-item-brown a:hover, a:focus {
+  background: #000000;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+
+
+
 .flex-item-brick a, a:active {
   background: #993333;
   padding: 5px;
@@ -335,6 +384,9 @@ height:auto;
     content: "FCC: ";
 }
 
+.flex-item-brown::before { 
+    content: "Geoloc: ";
+}
 /* end test content before and after */  
       
                
