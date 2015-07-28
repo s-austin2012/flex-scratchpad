@@ -324,11 +324,15 @@ height:auto;
     content: "To Do: ";
 }
 .flex-item-brick::before { 
-    content: "Link: ";
+    content: "Article: ";
 }
 
 .flex-item-brick a:visited:before {
    content:  "\2713 ";
+}
+
+.flex-item-blue::before { 
+    content: "FCC: ";
 }
 
 /* end test content before and after */  
