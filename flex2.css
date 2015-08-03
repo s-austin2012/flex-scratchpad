@@ -125,8 +125,6 @@ height:auto;
 /*adding nav styling 3August 2015*/
 nav ul li{
  display:inline-block;
-     min-height: 50px;
-    max-height: 50px;
 }
 
 /*end top nav styling */
