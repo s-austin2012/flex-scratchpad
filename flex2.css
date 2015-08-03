@@ -85,7 +85,7 @@ height:auto;
    -webkit-order: 1;
            order: 1;
    }
-    #topnav li a, a:active, a:visited {
+    #topnav a:active, a:visited {
    margin: 4px;
    padding: 5px;
    background: #ff0000;
@@ -93,7 +93,7 @@ height:auto;
    text-decoration:none;
    }
    
-  #topnav li a:hover, a:focus {
+  #topnav a:hover, a:focus {
    margin: 4px;
    padding: 5px;
    background: #000000;
