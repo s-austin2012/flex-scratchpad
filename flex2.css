@@ -540,7 +540,7 @@ height:auto;
 }
 
 .flex-item-blue a:visited:before {
-   content:  "\2713 ";
+   content:  "\2713 ";  
 }
 
 .flex-item-brown::before { 
