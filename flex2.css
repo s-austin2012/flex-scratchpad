@@ -330,13 +330,14 @@ nav ul li{
   text-decoration:none;
 } 
 
-.flex-item-red a, a:active {
+.flex-item-red a, a:active, a:visited {
   background: #ff0000;
   padding: 5px;
   /*width: 200px;*/
   /*height: 150px;*/
   margin-top: 10px;
   /*line-height: 150px;*/
+    line-height: 50px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -351,6 +352,7 @@ nav ul li{
   /*height: 150px;*/
   margin-top: 10px;
   /*line-height: 150px;*/
+    line-height: 50px;
   color: white;
   font-weight: bold;
   font-size: 1em;
