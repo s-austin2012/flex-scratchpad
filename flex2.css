@@ -12,6 +12,27 @@
         }
 
 /*end online offline status indicator styling */ 
+/* below from http://webaim.org/techniques/css/invisiblecontent/ */      
+  #skip a
+{
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+ 
+#skip a:focus
+{
+position:static;
+width:auto;
+height:auto;
+}     
+/* above end from http://webaim.org/techniques/css/invisiblecontent/ */   
+
+
+
 /*Source https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes */
   body {
    font: 16px Arial, Helvetica;
@@ -100,8 +121,9 @@
   }
   
   /*above bracket closes minimized window at 640 px */
- 
- /* Below adapted from CSS Tricks  https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+/*Flex modifications here remember to include the skip link */
+/*Adding blue-green color 1fb2d2*/
+/* Below adapted from CSS Tricks  https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 .flex-container {
   padding: 0;
   margin: 0;
@@ -117,6 +139,9 @@
   flex-wrap: wrap;
   flex-grow: 1;
 }
+/* storm color #4b6e8c */
+/* tan color #be9a84 */
+/*bluegreen color 1fb2d2 This will definitely need to be checked for color contrast*/
 
 .flex-item {
   background: tomato;
@@ -132,13 +157,11 @@
   text-align: center;
   overflow: hidden;
   flex-grow: 1;
-  /*order: 1;*/
+  order: 1;
 } 
 
-/* add blue color to above 00ccff */
-
-.flex-item-blue {
-  background: #333366;
+.flex-item-brick {
+  background: #993333;
   border-left:15px solid #000000;
   padding: 5px;
   width: 200px;
@@ -151,7 +174,93 @@
   text-align: center;
   overflow: hidden;
   flex-grow: 1;
-  /*order: 4;*/
+  order: 2;
+} 
+
+.flex-item-black {
+  background: #000000;
+  border-left:15px solid #ff0000;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  overflow: hidden;
+  flex-grow: 1;
+  order: 3;
+} 
+/* add blue color to above 00ccff */
+
+.flex-item-blue {
+  background: #333366;
+  border-left:15px solid #be9a84;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  overflow: hidden;
+  flex-grow: 1;
+  order: 4;
+} 
+
+.flex-item-bluegreen {
+  background: #1fb2d2;
+  border-left:15px solid #000000;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  overflow: hidden;
+  flex-grow: 1;
+  order: 5;
+} 
+
+.flex-item-storm {
+  background: #4b6e8c;
+  border-left:15px solid #1fb2d2;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  overflow: hidden;
+  flex-grow: 1;
+  order: 6;
+} 
+
+.flex-item-tan {
+  background: #be9a84;
+  border-left:15px solid #ff0000;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: black;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  overflow: hidden;
+  flex-grow: 1;
+  order: 7;
 } 
 
 .flex-item a, a:active {
@@ -211,9 +320,8 @@
   text-decoration:none;
 } 
 
-.flex-item-brick {
-  background: #993333;
-  border-left:15px solid #000000;
+.flex-item-storm a:hover, a:focus {
+  background: #000000;
   padding: 5px;
   width: 200px;
   height: 150px;
@@ -223,10 +331,136 @@
   font-weight: bold;
   font-size: 1em;
   text-align: center;
-  overflow: hidden;
-  flex-grow: 1;
-  /*order: 2;*/
+  text-decoration:none;
 } 
+
+.flex-item-storm a, a:active {
+  background: #4b6e8c;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+
+
+.flex-item-bluegreen a, a:active {
+  background: #1fb2d2;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+
+.flex-item-bluegreen a:hover, a:focus {
+  background: #000000;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+
+.flex-item-brick a, a:active {
+  background: #993333;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+
+.flex-item-brick a:hover, a:focus {
+  background: #000000;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+
+
+.flex-item-black a, a:active {
+  background: #000000;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+
+.flex-item-black a:hover, a:focus {
+  background: #993333;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+.flex-item-tan a, a:active {
+  background:# be9a84;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+
+.flex-item-tan a:hover, a:focus {
+  background: #000000;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+
 /*brown 67300c */
 
 .flex-item-brown {
@@ -274,120 +508,43 @@
   text-decoration:none;
 } 
 
-
-
-.flex-item-brick a, a:active {
-  background: #993333;
-  padding: 5px;
-  width: 200px;
-  height: 150px;
-  margin-top: 10px;
-  line-height: 150px;
-  color: white;
-  font-weight: bold;
-  font-size: 1em;
-  text-align: center;
-  text-decoration:none;
-} 
-
-.flex-item-brick a:hover, a:focus {
-  background: #000000;
-  padding: 5px;
-  width: 200px;
-  height: 150px;
-  margin-top: 10px;
-  line-height: 150px;
-  color: white;
-  font-weight: bold;
-  font-size: 1em;
-  text-align: center;
-  text-decoration:none;
-} 
-
-.flex-item-black {
-  background: #000000;
-  border-left:15px solid #ff0000;
-  padding: 5px;
-  width: 200px;
-  height: 150px;
-  margin-top: 10px;
-  line-height: 150px;
-  color: white;
-  font-weight: bold;
-  font-size: 1em;
-  text-align: center;
-  overflow: hidden;
-  flex-grow: 1;
-  /*order: 3;*/
-} 
-.flex-item-black a, a:active {
-  background: #000000;
-  padding: 5px;
-  width: 200px;
-  height: 150px;
-  margin-top: 10px;
-  line-height: 150px;
-  color: white;
-  font-weight: bold;
-  font-size: 1em;
-  text-align: center;
-  text-decoration:none;
-} 
-
-.flex-item-black a:hover, a:focus {
-  background: #993333;
-  padding: 5px;
-  width: 200px;
-  height: 150px;
-  margin-top: 10px;
-  line-height: 150px;
-  color: white;
-  font-weight: bold;
-  font-size: 1em;
-  text-align: center;
-  text-decoration:none;
-} 
-
 /*above is end of code modified and adapted from CSS tricks */
-/* below from http://webaim.org/techniques/css/invisiblecontent/ */      
-  #skip a
-{
-position:absolute;
-left:-10000px;
-top:auto;
-width:1px;
-height:1px;
-overflow:hidden;
-}
- 
-#skip a:focus
-{
-position:static;
-width:auto;
-height:auto;
-}     
+    
    
 /* below to test content before and after */
 /* also see reference https://css-tricks.com/css-content/ */
 .flex-item::before { 
     content: "To Do: ";
 }
+.flex-item-bluegreen::before { 
+    content: "To Do: ";
+}
+
+.flex-item-storm::before { 
+    content: "Testing: ";
+}
+
 .flex-item-brick::before { 
-    content: "Article: ";
+    content: "Link: ";
+}
+.flex-item-blue::before { 
+    content: "Link: ";
+}
+
+.flex-item-tan::before { 
+    content: "Techniques: ";
 }
 
 .flex-item-brick a:visited:before {
    content:  "\2713 ";
 }
 
-.flex-item-blue::before { 
-    content: "FCC: ";
+.flex-item-blue a:visited:before {
+   content:  "\2713 ";
 }
 
 .flex-item-brown::before { 
     content: "Geoloc: ";
 }
+
 /* end test content before and after */  
-      
-                  
-                      
