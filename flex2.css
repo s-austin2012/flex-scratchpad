@@ -160,7 +160,8 @@ nav ul li{
   justify-content: flex-start;
   /*add flex-wrap: wrap; this seems to solve the wrap-around problem for CSS tricks example*/
   flex-wrap: wrap;
-  /*flex-grow: 1;*/
+  flex-grow: 1;
+  max-height:25px;
 }
 /* storm color #4b6e8c */
 /* tan color #be9a84 */
