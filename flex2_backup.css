@@ -1,4 +1,4 @@
-/* beginning of online or offline status indicators */
+ /* beginning of online or offline status indicators */
  #status {
       color: #FFFFFF;
       padding: 5px;
@@ -12,25 +12,41 @@
         }
 
 /*end online offline status indicator styling */ 
-/* below from http://webaim.org/techniques/css/invisiblecontent/ */      
-  #skip a
-{
-position:absolute;
-left:-10000px;
-top:auto;
-width:1px;
-height:1px;
-overflow:hidden;
+/*new style for skip to main content */
+.skip {
+   background: #000000;
+   border-left: 15px solid #ff0000;
+   padding: 5px;
+   color: #ffffff;
 }
- 
-#skip a:focus
-{
-position:static;
-width:auto;
-height:auto;
-}     
-/* above end from http://webaim.org/techniques/css/invisiblecontent/ */   
 
+.skip a, a:active, a:visited {
+  padding: 5px;
+  /*width: 200px;*/
+  /*height: 150px;*/
+  margin-top: 10px;
+  /*line-height: 150px;*/
+  line-height: 1em;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+.skip a:hover, a:focus {
+  background:#ff0000;
+  padding: 5px;
+  /*width: 200px;*/
+  /*height: 150px;*/
+  margin-top: 10px;
+  /*line-height: 150px;*/
+  line-height: 1em;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+
+/*end new style for skip to main content */
 
 
 /*Source https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes */
@@ -62,8 +78,8 @@ height:auto;
    -webkit-order: 2;
            order: 2;
    }
-  
-  #main > nav {
+ /* change original nav to oldnav to preserve code 3 August 2015*/ 
+  #main > oldnav {
    margin: 4px;
    padding: 5px;
    border: 1px solid #8888bb;
@@ -74,7 +90,7 @@ height:auto;
    -webkit-order: 1;
            order: 1;
    }
-  
+
   #main > aside {
    margin: 4px;
    padding: 5px;
@@ -120,11 +136,34 @@ height:auto;
    }
   }
   
-  /*above bracket closes minimized window at 640 px */
+ /*above bracket closes minimized window at 640 px */
 /*Flex modifications here remember to include the skip link */
+/*adding nav styling 3August 2015*/
+nav ul li{
+ display:inline-block;
+}
+
+/*end top nav styling */
+
 /*Adding blue-green color 1fb2d2*/
 /* Below adapted from CSS Tricks  https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 .flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-start;
+  /*add flex-wrap: wrap; this seems to solve the wrap-around problem for CSS tricks example*/
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.nav-flex-container {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -159,6 +198,65 @@ height:auto;
   flex-grow: 1;
   order: 1;
 } 
+/*flex-item-red used for important nav links */
+.flex-item-red {
+  background: #ff0000;
+  border-left:15px solid #000000;
+  padding: 5px;
+  /*width: 200px;*/
+  /*height: 150px;*/
+  margin-top: 10px;
+  /*line-height: 150px;*/
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  flex-grow: 1;
+  /*order: 0;*/
+} 
+.flex-item-red a, a:active, a:visited {
+  background: #ff0000;
+  padding: 5px;
+  /*width: 200px;*/
+  /*height: 150px;*/
+  margin-top: 10px;
+  /*line-height: 150px;*/
+    line-height: 1em;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+
+.flex-item-red a:hover {
+  background: #000000;
+  padding: 5px;
+  /*width: 200px;*/
+  /*height: 150px;*/
+  margin-top: 10px;
+  /*line-height: 150px;*/
+    line-height: 1em;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+.flex-item-red a:focus {
+  background: #000000;
+  padding: 5px;
+  /*width: 200px;*/
+  /*height: 150px;*/
+  margin-top: 10px;
+  /*line-height: 150px;*/
+    line-height: 1em;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+}
+
 
 .flex-item-brick {
   background: #993333;
@@ -290,7 +388,6 @@ height:auto;
   text-align: center;
   text-decoration:none;
 } 
-
 
 .flex-item-blue a, a:active {
   background: #333366;
@@ -548,4 +645,5 @@ height:auto;
 }
 
 /* end test content before and after */  
-  
+                     
+            
