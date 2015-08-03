@@ -86,8 +86,8 @@ height:auto;
    -webkit-order: 3;
            order: 3;
    }
- /*removed header from the styling below which included both header and footer */
-  footer {
+ /*removed header and footer from the styling below which included both header and footer */
+  oldheader, oldfooter {
    display: block;
    margin: 4px;
    padding: 5px;
