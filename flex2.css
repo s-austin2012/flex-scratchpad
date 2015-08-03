@@ -74,30 +74,7 @@ height:auto;
    -webkit-order: 1;
            order: 1;
    }
-  /*original code for nav above, new code for nav below*/
-    #topnav li {
-   margin: 4px;
-   padding: 5px;
-   background: #ff0000;
-   display: inline-block;
 
-   }
-    #topnav a:active, a:visited {
-   margin: 4px;
-   padding: 5px;
-   background: #ff0000;
-   color: #ffffff;
-   text-decoration:none;
-   }
-   
-  #topnav a:hover, a:focus {
-   margin: 4px;
-   padding: 5px;
-   background: #000000;
-   color: #ffffff;
-   text-decoration:none;
-   }
-  /*end new code for nav 3 August 2015 */
   #main > aside {
    margin: 4px;
    padding: 5px;
@@ -181,6 +158,22 @@ height:auto;
   overflow: hidden;
   flex-grow: 1;
   order: 1;
+} 
+/*flex-item-red used for important nav links */
+.flex-item-red {
+  background: #ff0000;
+  border-left:15px solid #000000;
+  padding: 5px;
+  /*width: 200px;*/
+  /*height: 150px;*/
+  margin-top: 10px;
+  /*line-height: 150px;*/
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  flex-grow: 1;
+  /*order: 0;*/
 } 
 
 .flex-item-brick {
@@ -314,7 +307,33 @@ height:auto;
   text-decoration:none;
 } 
 
+.flex-item-red a, a:active {
+  background: #ff0000;
+  padding: 5px;
+  /*width: 200px;*/
+  /*height: 150px;*/
+  margin-top: 10px;
+  /*line-height: 150px;*/
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
 
+.flex-item-red a:hover, a:focus {
+  background: #000000;
+  padding: 5px;
+  /*width: 200px;*/
+  /*height: 150px;*/
+  margin-top: 10px;
+  /*line-height: 150px;*/
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
 .flex-item-blue a, a:active {
   background: #333366;
   padding: 5px;
