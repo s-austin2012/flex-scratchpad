@@ -21,7 +21,6 @@
 }
 
 .skip a, a:active, a:visited {
-  background: #000000;
   padding: 5px;
   /*width: 200px;*/
   /*height: 150px;*/
@@ -34,6 +33,7 @@
   text-decoration:none;
 } 
 .skip a:hover, a:focus {
+ color:#ff0000;
   padding: 5px;
   /*width: 200px;*/
   /*height: 150px;*/
