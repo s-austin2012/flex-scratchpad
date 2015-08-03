@@ -62,8 +62,8 @@ height:auto;
    -webkit-order: 2;
            order: 2;
    }
-  
-  #main > nav {
+ /* change original nav to oldnav to preserve code 3 August 2015*/ 
+  #main > oldnav {
    margin: 4px;
    padding: 5px;
    border: 1px solid #8888bb;
@@ -74,6 +74,20 @@ height:auto;
    -webkit-order: 1;
            order: 1;
    }
+  /*original code for nav above, new code for nav below*/
+    #main > nav {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #8888bb;
+   border-radius: 7pt;
+   background: #ff0000;
+   display: inline-block;
+   -webkit-flex: 1 6 20%;
+           flex: 1 6 20%;
+   -webkit-order: 1;
+           order: 1;
+   }
+  
   
   #main > aside {
    margin: 4px;
