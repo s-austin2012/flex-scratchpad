@@ -75,7 +75,7 @@ height:auto;
            order: 1;
    }
   /*original code for nav above, new code for nav below*/
-    #topnav > nav {
+    #topnav {
    margin: 4px;
    padding: 5px;
    border: 1px solid #8888bb;
@@ -563,4 +563,4 @@ height:auto;
 
 /* end test content before and after */  
   
-  
+   
