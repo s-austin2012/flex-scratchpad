@@ -80,10 +80,7 @@ height:auto;
    padding: 5px;
    background: #ff0000;
    display: inline-block;
-   -webkit-flex: 1 6 20%;
-           flex: 1 6 20%;
-   -webkit-order: 1;
-           order: 1;
+
    }
     #topnav a:active, a:visited {
    margin: 4px;
