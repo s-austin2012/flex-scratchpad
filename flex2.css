@@ -78,8 +78,6 @@ height:auto;
     #topnav li {
    margin: 4px;
    padding: 5px;
-   border: 1px solid #8888bb;
-   border-radius: 7pt;
    background: #ff0000;
    display: inline-block;
    -webkit-flex: 1 6 20%;
