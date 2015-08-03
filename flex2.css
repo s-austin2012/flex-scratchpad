@@ -85,12 +85,26 @@ height:auto;
    -webkit-order: 1;
            order: 1;
    }
-    #topnav li a:active {
+    #topnav li a:active, a:visited {
    margin: 4px;
    padding: 5px;
    background: #ff0000;
    color: #ffffff;
    display: inline-block;
+   text-decoration:none;
+   -webkit-flex: 1 6 20%;
+           flex: 1 6 20%;
+   -webkit-order: 1;
+           order: 1;
+   }
+   
+       #topnav li a:hover, a:focus {
+   margin: 4px;
+   padding: 5px;
+   background: #000000;
+   color: #ffffff;
+   display: inline-block;
+   text-decoration:none;
    -webkit-flex: 1 6 20%;
            flex: 1 6 20%;
    -webkit-order: 1;
