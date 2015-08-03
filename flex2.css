@@ -213,7 +213,7 @@ nav ul li{
   text-decoration:none;
 } 
 
-.flex-item-red a:hover, a:focus {
+.flex-item-red a:hover {
   background: #000000;
   padding: 5px;
   /*width: 200px;*/
@@ -227,6 +227,20 @@ nav ul li{
   text-align: center;
   text-decoration:none;
 } 
+.flex-item-red a:focus {
+  background: #000000;
+  padding: 5px;
+  /*width: 200px;*/
+  /*height: 150px;*/
+  margin-top: 10px;
+  /*line-height: 150px;*/
+    line-height: 1em;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+}
+
 
 .flex-item-brick {
   background: #993333;
