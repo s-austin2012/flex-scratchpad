@@ -123,12 +123,11 @@ height:auto;
  /*above bracket closes minimized window at 640 px */
 /*Flex modifications here remember to include the skip link */
 /*adding nav styling 3August 2015*/
-nav {
+nav ul li{
  display:inline-block;
+  list-style:none;
 }
-nav > li {
- list-style:none;
-}
+
 /*end top nav styling */
 
 /*Adding blue-green color 1fb2d2*/
