@@ -120,8 +120,14 @@ height:auto;
    }
   }
   
-  /*above bracket closes minimized window at 640 px */
+ /*above bracket closes minimized window at 640 px */
 /*Flex modifications here remember to include the skip link */
+/*adding nav styling 3August 2015*/
+nav {
+ display:inline-block;
+}
+/*end top nav styling */
+
 /*Adding blue-green color 1fb2d2*/
 /* Below adapted from CSS Tricks  https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 .flex-container {
