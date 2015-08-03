@@ -12,24 +12,6 @@
         }
 
 /*end online offline status indicator styling */ 
-/* below from http://webaim.org/techniques/css/invisiblecontent/ */      
-  #skip a
-{
-position:absolute;
-left:-10000px;
-top:auto;
-width:1px;
-height:1px;
-overflow:hidden;
-}
- 
-#skip a:focus
-{
-position:static;
-width:auto;
-height:auto;
-}     
-/* above end from http://webaim.org/techniques/css/invisiblecontent/ */   
 
 
 
