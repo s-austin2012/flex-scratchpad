@@ -653,6 +653,7 @@ nav ul li {
 
 .flex-item-black::before { 
     content: "Reference: ";
+    color:#993333;
 }
 
 /* end test content before and after */  
