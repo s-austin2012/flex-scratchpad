@@ -617,7 +617,7 @@ nav ul li {
 /* below to test content before and after */
 /* also see reference https://css-tricks.com/css-content/ */
 .flex-item::before { 
-    content: "To Do: ";
+    content: "Check: ";
 }
 .flex-item-bluegreen::before { 
     content: "To Do: ";
@@ -648,6 +648,10 @@ nav ul li {
 
 .flex-item-brown::before { 
     content: "Geoloc: ";
+}
+
+.flex-item-black::before { 
+    content: "Reference: ";
 }
 
 /* end test content before and after */  
