@@ -618,6 +618,7 @@ nav ul li {
 /* also see reference https://css-tricks.com/css-content/ */
 .flex-item::before { 
     content: "Check: ";
+    color: #67300c;
 }
 .flex-item-bluegreen::before { 
     content: "To Do: ";
