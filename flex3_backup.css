@@ -12,15 +12,15 @@
         }
 
 /*end online offline status indicator styling */ 
-/*style for skip to main content changed to oldskip -- makes links jump */
-.oldskip {
+/*style for skip to main content changed from original, which made links jump */
+.skip {
    background: #000000;
    border-left: 15px solid #ff0000;
    padding: 5px;
    color: #ffffff;
 }
 
-.oldskip a, a:active, a:visited {
+.skip a, a:active, a:visited {
   color:#ffffff;
   padding: 5px;
   /*width: 200px;*/
@@ -33,7 +33,7 @@
   text-align: center;
   text-decoration:none;
 } 
-.oldskip a:hover, a:focus {
+.skip a:hover, a:focus {
   background:#ff0000;
   padding: 5px;
   /*width: 200px;*/
@@ -48,6 +48,8 @@
 } 
 
 /*end style for skip to main content */
+
+
 
 
 /*Source https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes */
@@ -184,15 +186,16 @@ nav ul li {
 /* storm color #4b6e8c */
 /* tan color #be9a84 */
 /*bluegreen color 1fb2d2 This will definitely need to be checked for color contrast*/
+/*5 Aug heights and line-heights changed from 150 to 100 line heights need to remain for now, but check about alignment*/
 
 .flex-item {
   background: tomato;
   border-left:15px solid #993333;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -266,9 +269,9 @@ nav ul li {
   border-left:15px solid #000000;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -283,9 +286,9 @@ nav ul li {
   border-left:15px solid #ff0000;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -301,9 +304,9 @@ nav ul li {
   border-left:15px solid #be9a84;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -318,9 +321,9 @@ nav ul li {
   border-left:15px solid #000000;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -335,9 +338,9 @@ nav ul li {
   border-left:15px solid #1fb2d2;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -352,9 +355,9 @@ nav ul li {
   border-left:15px solid #ff0000;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: black;
   font-weight: bold;
   font-size: 1em;
@@ -368,9 +371,9 @@ nav ul li {
   background: tomato;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -382,9 +385,9 @@ nav ul li {
   background: #000000;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -396,9 +399,9 @@ nav ul li {
   background: #333366;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -410,9 +413,9 @@ nav ul li {
   background: #000000;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -424,9 +427,9 @@ nav ul li {
   background: #000000;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -438,9 +441,9 @@ nav ul li {
   background: #4b6e8c;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -453,9 +456,9 @@ nav ul li {
   background: #1fb2d2;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -467,9 +470,9 @@ nav ul li {
   background: #000000;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -481,9 +484,9 @@ nav ul li {
   background: #993333;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -495,9 +498,9 @@ nav ul li {
   background: #000000;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -510,9 +513,9 @@ nav ul li {
   background: #000000;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -524,9 +527,9 @@ nav ul li {
   background: #993333;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -537,9 +540,9 @@ nav ul li {
   background:# be9a84;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -551,9 +554,9 @@ nav ul li {
   background: #000000;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -568,9 +571,9 @@ nav ul li {
   border-left:15px solid #000000;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -584,9 +587,9 @@ nav ul li {
   background: #67300c;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -598,9 +601,9 @@ nav ul li {
   background: #000000;
   padding: 5px;
   width: 200px;
-  height: 150px;
+  height: 100px;
   margin-top: 10px;
-  line-height: 150px;
+  line-height: 100px;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -614,7 +617,8 @@ nav ul li {
 /* below to test content before and after */
 /* also see reference https://css-tricks.com/css-content/ */
 .flex-item::before { 
-    content: "To Do: ";
+    content: "Check: ";
+    color: #67300c;
 }
 .flex-item-bluegreen::before { 
     content: "To Do: ";
@@ -647,6 +651,9 @@ nav ul li {
     content: "Geoloc: ";
 }
 
+.flex-item-black::before { 
+    content: "Reference: ";
+    color:#993333;
+}
+
 /* end test content before and after */  
-                         
-             
