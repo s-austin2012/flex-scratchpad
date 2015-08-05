@@ -12,15 +12,15 @@
         }
 
 /*end online offline status indicator styling */ 
-/*new style for skip to main content */
-.skip {
+/*style for skip to main content changed to oldskip -- makes links jump */
+.oldskip {
    background: #000000;
    border-left: 15px solid #ff0000;
    padding: 5px;
    color: #ffffff;
 }
 
-.skip a, a:active, a:visited {
+.oldskip a, a:active, a:visited {
   color:#ffffff;
   padding: 5px;
   /*width: 200px;*/
@@ -33,7 +33,7 @@
   text-align: center;
   text-decoration:none;
 } 
-.skip a:hover, a:focus {
+.oldskip a:hover, a:focus {
   background:#ff0000;
   padding: 5px;
   /*width: 200px;*/
@@ -47,7 +47,7 @@
   text-decoration:none;
 } 
 
-/*end new style for skip to main content */
+/*end style for skip to main content */
 
 
 /*Source https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes */
@@ -143,8 +143,10 @@
 nav ul li{
  display:inline-block;
 }
-
 /*end top nav styling */
+.display-inlineblock {
+ display:inline-block;
+}
 
 /*Adding blue-green color 1fb2d2*/
 /* Below adapted from CSS Tricks  https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
