@@ -12,6 +12,45 @@
         }
 
 /*end online offline status indicator styling */ 
+/*style for skip to main content changed from original, which made links jump */
+.skip {
+   background: #000000;
+   border-left: 15px solid #ff0000;
+   padding: 5px;
+   color: #ffffff;
+}
+
+.skip a, a:active, a:visited {
+  color:#ffffff;
+  padding: 5px;
+  /*width: 200px;*/
+  /*height: 150px;*/
+  margin-top: 10px;
+  /*line-height: 150px;*/
+  line-height: 1em;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+.skip a:hover, a:focus {
+  background:#ff0000;
+  padding: 5px;
+  /*width: 200px;*/
+  /*height: 150px;*/
+  margin-top: 10px;
+  /*line-height: 150px;*/
+  line-height: 1em;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+} 
+
+/*end style for skip to main content */
+
+
+
 
 /*Source https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes */
   body {
