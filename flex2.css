@@ -140,11 +140,11 @@
  /*above bracket closes minimized window at 640 px */
 /*Flex modifications here remember to include the skip link */
 /*adding nav styling 3August 2015*/
-nav ul li{
+nav ul li {
  display:inline-block;
 }
 /*end top nav styling */
-.display-inlineblock {
+#canvastest ul li {
  display:inline-block;
 }
 
